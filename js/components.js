@@ -213,6 +213,32 @@
       FLOAT_HTML + STICKY_HTML + MODAL_HTML + FOOTER_HTML
     );
 
+    /* ── Hamburger / Drawer ── */
+    const hbg        = document.getElementById('hbg');
+    const drawer     = document.getElementById('drawer');
+    const drawerBd   = document.getElementById('drawerBd');
+    const drawerClose = document.getElementById('drawerClose');
+
+    function openDrawer() {
+      drawer.classList.add('open');
+      drawerBd.classList.add('open');
+      hbg.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      drawerBd.classList.remove('open');
+      hbg.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    window.closeDrawer = closeDrawer;
+
+    if (hbg) hbg.addEventListener('click', function () {
+      drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+    });
+    if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
+    if (drawerBd)    drawerBd.addEventListener('click', closeDrawer);
+
     /* ── Custom Cursor ── */
     initCustomCursor();
   });
