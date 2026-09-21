@@ -71,6 +71,7 @@
   background: var(--g50); aspect-ratio: 5/4; box-shadow: var(--sh-m);
   display: flex; align-items: center; justify-content: center;
 }
+.intro-visual img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
 .intro-visual svg { width: 110px; height: 110px; opacity: .1; }
 .intro-label { font-size: .7rem; font-weight: 700; letter-spacing: .12em; color: var(--gold); text-transform: uppercase; margin-bottom: 14px; }
 .intro-title { font-size: 1.9rem; font-weight: 900; color: var(--navy); line-height: 1.3; word-break: keep-all; margin-bottom: 18px; letter-spacing: -.04em; }
@@ -127,7 +128,7 @@
   .svc-hero-inner { grid-template-columns: 1fr; }
   .hero-stat-box { display: none; }
   .intro-split { grid-template-columns: 1fr; }
-  .intro-visual { display: none; }
+  .intro-visual { display: block; aspect-ratio: auto; min-height: 220px; }
   .method-grid { grid-template-columns: 1fr; }
   .lens-grid { grid-template-columns: 1fr 1fr; }
   .who-grid { grid-template-columns: 1fr; }
@@ -203,14 +204,7 @@
   <div class="wrap">
     <div class="intro-split rv">
       <div class="intro-visual">
-        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="15" y="35" width="70" height="30" rx="15" stroke="#0b1f3a" stroke-width="2"/>
-          <circle cx="38" cy="50" r="8" stroke="#0b1f3a" stroke-width="1.5"/>
-          <circle cx="62" cy="50" r="8" stroke="#0b1f3a" stroke-width="1.5"/>
-          <path d="M50 35 Q50 20 50 15" stroke="#0b1f3a" stroke-width="1.5" stroke-dasharray="3 2"/>
-          <line x1="8" y1="42" x2="15" y2="45" stroke="#0b1f3a" stroke-width="1.5"/>
-          <line x1="85" y1="45" x2="92" y2="42" stroke="#0b1f3a" stroke-width="1.5"/>
-        </svg>
+        <img src="img/progressive-zeiss-lens.jpg" alt="ZEISS 누진다초점 렌즈 R·L 마킹" />
       </div>
       <div>
         <p class="intro-label">WHY PROGRESSIVE</p>
