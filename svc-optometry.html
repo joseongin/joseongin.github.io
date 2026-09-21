@@ -106,6 +106,7 @@
   display: flex; align-items: center; justify-content: center; position: relative;
 }
 .big-intro-visual svg { width: 110px; height: 110px; opacity: .08; }
+.big-intro-visual img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
 .big-intro-tag {
   font-size: .7rem; font-weight: 700; letter-spacing: .12em;
   color: var(--gold); text-transform: uppercase; margin-bottom: 14px;
@@ -158,7 +159,7 @@
   .svc-hero-inner { grid-template-columns: 1fr; }
   .svc-hero-stat-panel { display: none; }
   .big-intro { grid-template-columns: 1fr; }
-  .big-intro-visual { display: none; }
+  .big-intro-visual { display: block; aspect-ratio: auto; min-height: 220px; }
   .check-grid { grid-template-columns: 1fr; }
   .who-grid { grid-template-columns: 1fr 1fr; }
 }
@@ -293,15 +294,7 @@
   <div class="wrap">
     <div class="big-intro rv">
       <div class="big-intro-visual">
-        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="50" cy="50" r="44" stroke="#0b1f3a" stroke-width="2"/>
-          <circle cx="50" cy="50" r="28" stroke="#0b1f3a" stroke-width="1.5" stroke-dasharray="4 3"/>
-          <circle cx="50" cy="50" r="12" fill="#0b1f3a"/>
-          <line x1="6" y1="50" x2="94" y2="50" stroke="#0b1f3a" stroke-width="1.5"/>
-          <line x1="50" y1="6" x2="50" y2="94" stroke="#0b1f3a" stroke-width="1.5"/>
-          <line x1="19" y1="19" x2="31" y2="31" stroke="#0b1f3a" stroke-width="1.5"/>
-          <line x1="69" y1="69" x2="81" y2="81" stroke="#0b1f3a" stroke-width="1.5"/>
-        </svg>
+        <img src="img/optometry-clinic.jpg" alt="정밀검안 — 각막지형도·포롭터·트라이얼 검사 현장" />
       </div>
       <div>
         <p class="big-intro-tag">WHY PRECISION OPTOMETRY</p>
