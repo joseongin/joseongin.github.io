@@ -67,10 +67,10 @@ sections.forEach(s => sectionObserver.observe(s));
 /* ──────────────────────────────────────────
    4. Hamburger / Drawer
 ────────────────────────────────────────── */
-const hamburger     = document.getElementById('hamburger');
-const drawer        = document.getElementById('drawer');
-const drawerBackdrop = document.getElementById('drawerBackdrop');
-const drawerClose   = document.getElementById('drawerClose');
+const hamburger      = document.getElementById('hbg');
+const drawer         = document.getElementById('drawer');
+const drawerBackdrop = document.getElementById('drawerBd');
+const drawerClose    = document.getElementById('drawerClose');
 
 function openDrawer() {
   drawer.classList.add('open');
@@ -89,6 +89,7 @@ hamburger.addEventListener('click', () => {
   drawer.classList.contains('open') ? closeDrawer() : openDrawer();
 });
 drawerClose.addEventListener('click', closeDrawer);
+drawerBackdrop.addEventListener('click', closeDrawer);
 
 // Expose closeDrawer globally (used in HTML onclick)
 window.closeDrawer = closeDrawer;
