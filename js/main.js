@@ -66,33 +66,41 @@ sections.forEach(s => sectionObserver.observe(s));
 
 /* ──────────────────────────────────────────
    4. Hamburger / Drawer
+   (components.js가 DOMContentLoaded 후 DOM 삽입하므로 동일하게 래핑)
 ────────────────────────────────────────── */
-const hamburger      = document.getElementById('hbg');
-const drawer         = document.getElementById('drawer');
-const drawerBackdrop = document.getElementById('drawerBd');
-const drawerClose    = document.getElementById('drawerClose');
-
 function openDrawer() {
+  const drawer         = document.getElementById('drawer');
+  const drawerBackdrop = document.getElementById('drawerBd');
+  const hamburger      = document.getElementById('hbg');
+  if (!drawer) return;
   drawer.classList.add('open');
   drawerBackdrop.classList.add('open');
   hamburger.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
 function closeDrawer() {
+  const drawer         = document.getElementById('drawer');
+  const drawerBackdrop = document.getElementById('drawerBd');
+  const hamburger      = document.getElementById('hbg');
+  if (!drawer) return;
   drawer.classList.remove('open');
   drawerBackdrop.classList.remove('open');
   hamburger.classList.remove('open');
   document.body.style.overflow = '';
 }
-
-hamburger.addEventListener('click', () => {
-  drawer.classList.contains('open') ? closeDrawer() : openDrawer();
-});
-drawerClose.addEventListener('click', closeDrawer);
-drawerBackdrop.addEventListener('click', closeDrawer);
-
-// Expose closeDrawer globally (used in HTML onclick)
 window.closeDrawer = closeDrawer;
+
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger      = document.getElementById('hbg');
+  const drawerBackdrop = document.getElementById('drawerBd');
+  const drawerClose    = document.getElementById('drawerClose');
+  if (hamburger)      hamburger.addEventListener('click', () => {
+    const drawer = document.getElementById('drawer');
+    drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+  });
+  if (drawerClose)    drawerClose.addEventListener('click', closeDrawer);
+  if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeDrawer);
+});
 
 /* ──────────────────────────────────────────
    5. Modal
