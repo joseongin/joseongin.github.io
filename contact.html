@@ -6,10 +6,10 @@
 <meta http-equiv="Pragma" content="no-cache"/>
 <meta http-equiv="Expires" content="0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Contact — 조성인 안경원</title>
-<meta name="description" content="대전 서구 둔산북로 22 153·154호. 조성인 안경원 위치, 영업시간, 주차, 예약 안내."/>
+<title>Contact — 조성인 안경</title>
+<meta name="description" content="대전 서구 둔산북로 22 153·154호. 조성인 안경 위치, 영업시간, 주차, 예약 안내."/>
 <link rel="icon" href="favicon.ico"/>
-<link rel="stylesheet" href="css/common.css?v=20260617b"/>
+<link rel="stylesheet" href="css/common.css?v=20260724b"/>
 <style>
 /* ── 지도 + 정보 ── */
 .contact-grid {
@@ -22,13 +22,30 @@
   border-radius: var(--rl);
   overflow: hidden;
   box-shadow: var(--sh-m);
-  aspect-ratio: 4/3;
+  border: 1px solid var(--bdr);
+  height: 540px;
   background: var(--g50);
   position: relative;
 }
 .map-wrap iframe {
   width: 100%; height: 100%;
   border: none; display: block;
+}
+.map-overlay-btn {
+  position: absolute; left: 16px; bottom: 16px; z-index: 5;
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #fff; color: var(--navy);
+  font-size: .84rem; font-weight: 800;
+  padding: 11px 18px; border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(11,31,58,.22);
+  text-decoration: none;
+  transition: transform .2s, box-shadow .2s;
+}
+.map-overlay-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(11,31,58,.3); }
+.map-overlay-mark {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px; border-radius: 6px;
+  background: #03c75a; color: #fff; font-weight: 900; font-size: .8rem;
 }
 
 /* ── 정보 패널 ── */
@@ -75,26 +92,99 @@
 }
 .info-btns .btn { flex: 1; min-width: 120px; justify-content: center; font-size: .88rem; padding: 12px 16px; }
 
-/* ── 예약 채널 ── */
-.channel-grid {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
-}
-.channel-card {
+/* ── 네이버 예약 CTA (단일 채널) ── */
+.reserve-panel {
+  max-width: 760px; margin: 0 auto;
+  background: #fff;
+  border: 1px solid var(--bdr);
   border-radius: var(--rl);
-  padding: 32px 20px;
+  box-shadow: var(--sh-s);
+  padding: clamp(36px, 5vw, 56px);
   text-align: center;
-  display: flex; flex-direction: column; align-items: center; gap: 10px;
-  text-decoration: none;
-  transition: transform .22s, box-shadow .22s;
+  position: relative; overflow: hidden;
 }
-.channel-card:hover { transform: translateY(-4px); box-shadow: var(--sh-m); }
-.channel-card.naver { background: #03c75a; color: #fff; }
-.channel-card.phone { background: var(--navy); color: #fff; }
-.channel-card.talk  { background: #fee500; color: #191919; }
-.channel-card.insta { background: linear-gradient(135deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); color: #fff; }
-.channel-icon { font-size: 1.5rem; font-weight: 900; line-height: 1; }
-.channel-name { font-size: .93rem; font-weight: 800; }
-.channel-desc { font-size: .76rem; opacity: .82; word-break: keep-all; line-height: 1.5; }
+.reserve-panel::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: #03c75a;
+}
+.reserve-naver-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 60px; height: 60px; border-radius: 16px;
+  background: #03c75a; color: #fff;
+  font-size: 1.7rem; font-weight: 900; line-height: 1;
+  margin: 0 auto 22px;
+  box-shadow: 0 10px 24px rgba(3,199,90,.28);
+}
+.reserve-panel h3 {
+  font-size: clamp(1.3rem, 2.4vw, 1.7rem); font-weight: 900;
+  color: var(--navy); letter-spacing: -.025em; margin-bottom: 14px;
+  word-break: keep-all;
+}
+.reserve-panel p {
+  font-size: .96rem; color: var(--sub); line-height: 1.9;
+  word-break: keep-all; margin-bottom: 30px;
+  max-width: 460px; margin-left: auto; margin-right: auto;
+}
+.btn-naver {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  background: #03c75a; color: #fff !important;
+  font-size: 1.02rem; font-weight: 800;
+  padding: 16px 40px; border-radius: 12px;
+  text-decoration: none; border: none;
+  transition: transform .2s, box-shadow .2s, background .2s;
+  box-shadow: 0 8px 20px rgba(3,199,90,.3);
+}
+.btn-naver:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(3,199,90,.4); background: #02b350; }
+.btn-naver .n-mark { font-weight: 900; font-size: 1.15rem; }
+.reserve-note {
+  margin-top: 22px; font-size: .82rem; color: var(--g400);
+  letter-spacing: .01em;
+}
+.reserve-note strong { color: var(--navy-2); font-weight: 700; }
+
+/* ── 네이버 후기 ── */
+.reviews-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
+}
+.review-card {
+  background: #fff;
+  border: 1px solid var(--bdr);
+  border-radius: var(--rl);
+  padding: 30px 30px 28px;
+  box-shadow: var(--sh-s);
+  display: flex; flex-direction: column; gap: 14px;
+  transition: transform .3s var(--ease-out-expo,ease), box-shadow .3s, border-color .3s;
+}
+.review-card:hover { transform: translateY(-6px); box-shadow: var(--sh-m); border-color: rgba(184,146,74,.3); }
+.review-stars { color: #ffb400; font-size: 1rem; letter-spacing: 2px; line-height: 1; }
+.review-body {
+  font-size: .93rem; color: var(--text); line-height: 1.9;
+  word-break: keep-all; flex: 1;
+}
+.review-meta {
+  display: flex; align-items: center; gap: 12px;
+  padding-top: 14px; border-top: 1px solid var(--bdr);
+}
+.review-avatar {
+  width: 38px; height: 38px; border-radius: 50%;
+  background: var(--navy); color: var(--gold-l);
+  display: flex; align-items: center; justify-content: center;
+  font-size: .9rem; font-weight: 800; flex-shrink: 0;
+}
+.review-author { font-size: .84rem; font-weight: 700; color: var(--navy); line-height: 1.3; }
+.review-tag { font-size: .72rem; color: var(--g400); }
+.reviews-cta { text-align: center; margin-top: 40px; }
+.reviews-cta .btn-naver-outline {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 1.5px solid #03c75a; color: #03c75a;
+  background: #fff;
+  font-size: .92rem; font-weight: 800;
+  padding: 13px 30px; border-radius: 10px;
+  text-decoration: none;
+  transition: background .2s, color .2s;
+}
+.reviews-cta .btn-naver-outline:hover { background: #03c75a; color: #fff; }
 
 /* ── Hours Table ── */
 .hours-table { width: 100%; border-collapse: collapse; border-radius: var(--rl); overflow: hidden; box-shadow: var(--sh-s); }
@@ -131,14 +221,18 @@
 /* ── Responsive ── */
 @media (max-width: 1060px) {
   .contact-grid { grid-template-columns: 1fr; }
-  .map-wrap { aspect-ratio: 16/9; }
-  .channel-grid { grid-template-columns: repeat(2, 1fr); }
+  .map-wrap { height: 420px; }
+  .reviews-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 720px) {
+  .reviews-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 600px) {
-  .channel-grid { grid-template-columns: repeat(2, 1fr); }
+  .map-wrap { height: 360px; }
   .info-card-head { padding: 24px 24px 20px; }
   .info-rows { padding: 0 24px; }
   .info-btns { padding: 16px 24px 24px; }
+  .reserve-panel { padding: 32px 24px; }
 }
 </style>
 </head>
@@ -161,20 +255,24 @@
 <section class="page-sec">
   <div class="wrap">
     <div class="contact-grid">
-      <!-- 네이버 지도 임베드 -->
+      <!-- 지도 임베드 (전체 지도 노출) + 네이버 지도 오버레이 링크 -->
       <div class="map-wrap rv">
         <iframe
-          src="https://map.naver.com/p/entry/place/1694854628?c=15,0,0,0,dh&ismapdivVisible=true"
-          title="조성인 안경원 위치 — 네이버 지도"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=127.3705750%2C36.3505937%2C127.3835750%2C36.3605937&amp;layer=mapnik&amp;marker=36.3555937%2C127.3770750"
+          title="조성인 안경 위치 지도"
+          loading="lazy"
           allowfullscreen>
         </iframe>
+        <a href="http://map.naver.com/p/entry/place/1694854628" target="_blank" class="map-overlay-btn">
+          <span class="map-overlay-mark">N</span> 네이버 지도에서 열기 &#8594;
+        </a>
       </div>
 
       <!-- 정보 패널 -->
       <div class="rv d1">
         <div class="info-card">
           <div class="info-card-head">
-            <h2>조성인 안경원</h2>
+            <h2>조성인 안경</h2>
             <p>JOSEONGIN OPTICAL · DAEJEON</p>
           </div>
           <div class="info-rows">
@@ -193,7 +291,7 @@
                 <p class="info-row-value">
                   <a href="tel:05071439-0078" style="color:inherit;">0507-1439-0078</a>
                 </p>
-                <p class="info-row-sub">전화 및 문자 예약 가능</p>
+                <p class="info-row-sub">문의 전화 가능 (예약은 네이버 권장)</p>
               </div>
             </div>
             <div class="info-row">
@@ -225,35 +323,79 @@
   </div>
 </section>
 
-<!-- ── 예약 채널 ── -->
+<!-- ── 예약 (네이버 예약 단일 채널) ── -->
 <section class="page-sec page-sec--off">
   <div class="wrap">
     <div class="s-head s-head--c rv">
-      <div class="s-label s-label--c">Reservation Channels</div>
-      <h2 class="s-title">예약 방법 4가지</h2>
-      <p class="s-sub">편하신 방법으로 예약해 주세요. 예약 후 대기 없이 충분한 검사 시간이 배정됩니다.</p>
+      <div class="s-label s-label--c">Reservation</div>
+      <h2 class="s-title">네이버로 간편하게 예약하세요</h2>
+      <p class="s-sub">충분한 검사 시간 확보를 위해 예약제로 운영됩니다.<br>예약 후 대기 없이 정밀 검안 시간이 배정됩니다.</p>
     </div>
-    <div class="channel-grid rv">
+    <div class="reserve-panel rv">
+      <div class="reserve-naver-badge">N</div>
+      <h3>네이버 예약</h3>
+      <p>원하시는 날짜와 시간을 선택하면 즉시 예약이 완료됩니다.<br>가장 빠르고 정확한 예약 방법입니다.</p>
       <a href="https://m.booking.naver.com/booking/13/bizes/819206/items/4948017?area=bmp&lang=ko&service-target=map-pc&startDate=2026-05-18&theme=place"
-         target="_blank" class="channel-card naver">
-        <div class="channel-icon">N</div>
-        <div class="channel-name">네이버 예약</div>
-        <div class="channel-desc">날짜·시간 선택 후<br>즉시 예약 가능</div>
+         target="_blank" class="btn-naver">
+        <span class="n-mark">N</span> 네이버 예약하기
       </a>
-      <a href="tel:05071439-0078" class="channel-card phone">
-        <div class="channel-icon">&#9742;</div>
-        <div class="channel-name">전화 예약</div>
-        <div class="channel-desc">0507-1439-0078<br>화~금 10:00~19:30 / 토~일 10:00~19:00</div>
-      </a>
-      <a href="https://talk.naver.com/ct/w5uyll?frm=pblog#nafullscreen" target="_blank" class="channel-card talk">
-        <div class="channel-icon">&#9670;</div>
-        <div class="channel-name">네이버 톡</div>
-        <div class="channel-desc">채팅으로 빠르게<br>예약·문의</div>
-      </a>
-      <a href="https://www.instagram.com/joseongin_glasses/" target="_blank" class="channel-card insta">
-        <div class="channel-icon">IG</div>
-        <div class="channel-name">인스타그램 DM</div>
-        <div class="channel-desc">@joseongin_glasses<br>DM 상담</div>
+      <p class="reserve-note">
+        전화 문의 <strong>0507-1439-0078</strong> &nbsp;|&nbsp; 월요일 정기 휴무
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── 네이버 후기 ── -->
+<section class="page-sec">
+  <div class="wrap">
+    <div class="s-head s-head--c rv">
+      <div class="s-label s-label--c">Reviews</div>
+      <h2 class="s-title">고객 후기</h2>
+      <p class="s-sub">실제 방문 고객들이 네이버에 남겨주신 생생한 후기입니다.</p>
+    </div>
+    <div class="reviews-grid rv">
+
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-body">누진 안경만 세 번째인데 여기서 처음으로 흔들림 없이 선명하게 보여요. 검사 시간도 충분히 들여주시고 하나하나 설명해주셔서 믿음이 갔습니다.</p>
+        <div class="review-meta">
+          <div class="review-avatar">김</div>
+          <div>
+            <div class="review-author">김&#42;&#42; 님</div>
+            <div class="review-tag">누진다초점 · 60대</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-body">고도근시라 늘 눈이 작아 보였는데 여기 안경은 확실히 덜 작아 보여요. PD 측정부터 다르다는 게 느껴졌습니다. 대전에서 제일 꼼꼼한 안경원이에요.</p>
+        <div class="review-meta">
+          <div class="review-avatar">이</div>
+          <div>
+            <div class="review-author">이&#42;&#42; 님</div>
+            <div class="review-tag">고도근시 · 30대</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-body">아이 근시 관리 때문에 다녀요. 자이스 장비로 정밀하게 검사해주시고, 진행 상황을 데이터로 보여주셔서 안심이 됩니다. 원장님이 직접 봐주셔서 좋아요.</p>
+        <div class="review-meta">
+          <div class="review-avatar">박</div>
+          <div>
+            <div class="review-author">박&#42;&#42; 님</div>
+            <div class="review-tag">성장기 근시 억제 · 학부모</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="reviews-cta rv">
+      <a href="http://map.naver.com/p/entry/place/1694854628" target="_blank" class="btn-naver-outline">
+        <span style="font-weight:900;">N</span> 네이버에서 후기 더 보기 &#8594;
       </a>
     </div>
   </div>

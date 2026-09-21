@@ -6,59 +6,15 @@
 <meta http-equiv="Pragma" content="no-cache"/>
 <meta http-equiv="Expires" content="0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>첨단 장비 — 조성인 안경원</title>
-<meta name="description" content="ZEISS i.Profiler, 사르망 트라이얼 렌즈, 정밀 피팅 시스템. 대전 조성인 안경원이 보유한 전문 장비를 소개합니다."/>
+<title>첨단 장비 — 조성인 안경</title>
+<meta name="description" content="ZEISS i.Profiler, 사르망 트라이얼 렌즈, 정밀 피팅 시스템. 대전 조성인 안경이 보유한 전문 장비를 소개합니다."/>
 <link rel="icon" href="favicon.ico"/>
-<link rel="stylesheet" href="css/common.css?v=20260617b"/>
+<link rel="stylesheet" href="css/common.css?v=20260724c"/>
 <style>
-/* ── Equipment Cards ── */
-.eq-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-}
-.eq-card {
-  background: #fff;
-  border-radius: var(--rl);
-  overflow: hidden;
-  box-shadow: var(--sh-s);
-  transition: transform .3s, box-shadow .3s;
-}
-.eq-card:hover { transform: translateY(-6px); box-shadow: var(--sh-m); }
-.eq-card-img {
-  width: 100%; aspect-ratio: 16/10;
-  object-fit: cover; display: block;
-  background: #e8edf4;
-}
-.eq-card-body { padding: 28px 28px 32px; }
-.eq-card-tag {
-  display: inline-block;
-  font-size: .72rem; font-weight: 700; letter-spacing: .1em;
-  color: var(--gold); text-transform: uppercase;
-  margin-bottom: 10px;
-}
-.eq-card-title {
-  font-size: 1.25rem; font-weight: 700; color: var(--navy);
-  margin-bottom: 12px; word-break: keep-all; line-height: 1.5;
-}
-.eq-card-desc {
-  font-size: .93rem; color: #4a5568; line-height: 1.8;
-  word-break: keep-all; margin-bottom: 20px;
-}
-.eq-card-specs { list-style: none; padding: 0; margin: 0; }
-.eq-card-specs li {
-  font-size: .85rem; color: #2d3748;
-  padding: 7px 0; border-bottom: 1px solid #edf0f5;
-  display: flex; gap: 10px; word-break: keep-all;
-}
-.eq-card-specs li:last-child { border-bottom: none; }
-.eq-card-specs li::before {
-  content: "\25C6";
-  color: var(--gold); font-size: .65rem; margin-top: 3px; flex-shrink: 0;
-  line-height: 1;
-}
 
-/* ── Deep-dive Section ── */
+/* ══════════════════════════════════════
+   DEEP-DIVE — 대표 장비 사진 + 텍스트 (좌우 스플릿)
+══════════════════════════════════════ */
 .deep-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -67,6 +23,7 @@
 }
 .deep-grid.reverse { direction: rtl; }
 .deep-grid.reverse > * { direction: ltr; }
+
 .deep-img-wrap {
   position: relative;
   border-radius: var(--rl);
@@ -80,7 +37,6 @@
   transition: transform 1s cubic-bezier(0.76,0,0.24,1);
 }
 .deep-img-wrap:hover img { transform: scale(1.03); }
-/* 상단 골드 배지 라인 */
 .deep-img-wrap::before {
   content: '';
   position: absolute; top: -16px; left: -16px; right: 32px; bottom: 32px;
@@ -88,281 +44,259 @@
   border-radius: calc(var(--rl) + 2px);
   pointer-events: none; z-index: 0;
 }
-/* 이미지 좌하단 골드 그라디언트 장식 */
 .deep-img-wrap::after {
   content: '';
   position: absolute; inset: 0; z-index: 1;
-  background: linear-gradient(
-    to top,
-    rgba(11,31,58,.22) 0%,
-    transparent 40%
-  );
+  background: linear-gradient(to top, rgba(11,31,58,.22) 0%, transparent 40%);
   pointer-events: none;
 }
-/* 이미지 라벨 배지 */
 .deep-img-badge {
   position: absolute; z-index: 2;
   bottom: 20px; left: 20px;
   background: rgba(11,31,58,.82);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(184,147,100,.32);
-  border-radius: 3px;
-  padding: 8px 16px;
+  border-radius: 3px; padding: 8px 16px;
   color: var(--gold-l);
-  font-size: .68rem; font-weight: 700; letter-spacing: .14em;
-  text-transform: uppercase;
+  font-size: .68rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
 }
+
 .deep-tag {
   font-size: .72rem; font-weight: 700; letter-spacing: .12em;
   color: var(--gold); text-transform: uppercase; margin-bottom: 14px;
+  display: flex; align-items: center; gap: 10px;
+}
+.deep-tag::before {
+  content: ''; display: inline-block; width: 24px; height: 1.5px; background: var(--gold);
 }
 .deep-title {
-  font-size: 1.8rem; font-weight: 800; color: var(--navy);
-  line-height: 1.35; word-break: keep-all; margin-bottom: 18px;
+  font-size: clamp(1.5rem, 2.5vw, 1.9rem); font-weight: 800; color: var(--navy);
+  line-height: 1.35; word-break: keep-all; margin-bottom: 18px; letter-spacing: -.03em;
 }
 .deep-lead {
-  font-size: 1.05rem; color: #2d3748; line-height: 1.9;
-  word-break: keep-all; margin-bottom: 24px;
+  font-size: 1.0rem; color: var(--sub);
+  line-height: 1.9; word-break: keep-all; margin-bottom: 24px;
 }
 .deep-list { list-style: none; padding: 0; margin: 0 0 28px; }
 .deep-list li {
-  display: flex; gap: 14px; padding: 10px 0;
-  border-bottom: 1px solid #edf0f5; align-items: flex-start;
+  display: flex; gap: 14px; padding: 12px 0;
+  border-bottom: 1px solid var(--bdr); align-items: flex-start;
 }
 .deep-list li:last-child { border-bottom: none; }
 .deep-list-icon {
   width: 32px; height: 32px; border-radius: 50%;
-  background: var(--navy); color: var(--gold);
+  background: var(--navy); color: var(--gold-l);
   display: flex; align-items: center; justify-content: center;
-  font-size: .75rem; font-weight: 800; flex-shrink: 0; margin-top: 1px;
+  font-size: .72rem; font-weight: 800; flex-shrink: 0; margin-top: 1px;
 }
-.deep-list-text { font-size: .93rem; color: #2d3748; line-height: 1.75; word-break: keep-all; }
+.deep-list-text { font-size: .93rem; color: var(--sub); line-height: 1.75; word-break: keep-all; }
 .deep-list-text strong { color: var(--navy); font-weight: 700; }
 
-/* ── Flow Section ── */
-.flow-wrap {
-  display: flex; gap: 0; align-items: stretch;
-  border-radius: var(--rl); overflow: hidden;
-  box-shadow: var(--sh-m);
+/* ══════════════════════════════════════
+   보유 장비 리스트 (텍스트 중심, 간결)
+══════════════════════════════════════ */
+.other-eq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--bdr);
+  border: 1px solid var(--bdr);
+  border-radius: var(--rl);
+  overflow: hidden;
 }
-.flow-item {
-  flex: 1; padding: 40px 28px;
-  display: flex; flex-direction: column; align-items: center; text-align: center;
-  background: #fff; position: relative;
+.other-eq-item {
+  background: #fff;
+  padding: 36px 40px;
+  display: flex; gap: 24px; align-items: flex-start;
+  transition: background .25s;
 }
-.flow-item:nth-child(odd) { background: var(--navy); }
-.flow-item:nth-child(odd) .flow-num,
-.flow-item:nth-child(odd) .flow-title,
-.flow-item:nth-child(odd) .flow-desc { color: #fff; }
-.flow-item:nth-child(odd) .flow-title { color: var(--gold); }
-.flow-num {
-  font-size: 2rem; font-weight: 900; color: var(--navy);
-  opacity: .15; line-height: 1; margin-bottom: 12px;
+.other-eq-item:hover { background: var(--off); }
+.other-eq-num {
+  font-size: .58rem; font-weight: 800; letter-spacing: .2em;
+  color: var(--gold); padding-top: 6px; flex-shrink: 0; min-width: 28px;
+}
+.other-eq-body { flex: 1; }
+.other-eq-tag {
+  font-size: .63rem; font-weight: 700; letter-spacing: .12em;
+  color: var(--g400); text-transform: uppercase; margin-bottom: 8px;
+}
+.other-eq-title {
+  font-size: 1.05rem; font-weight: 800; color: var(--navy);
+  margin-bottom: 10px; word-break: keep-all; letter-spacing: -.02em;
+}
+.other-eq-desc {
+  font-size: .88rem; color: var(--sub); line-height: 1.8; word-break: keep-all;
+  margin-bottom: 14px;
+}
+.other-eq-specs {
+  display: flex; flex-wrap: wrap; gap: 6px;
+}
+.other-eq-spec {
+  font-size: .73rem; font-weight: 600; color: var(--navy);
+  background: var(--off); border: 1px solid var(--bdr);
+  padding: 4px 12px; border-radius: 20px;
+}
+
+/* ══════════════════════════════════════
+   6단계 프로세스 플로우
+══════════════════════════════════════ */
+.flow-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--bdr);
+  border: 1px solid var(--bdr);
+  border-radius: var(--rl);
+  overflow: hidden;
+}
+.flow-step {
+  background: #fff;
+  padding: 40px 32px 36px;
+  position: relative;
+  transition: background .25s;
+}
+.flow-step:hover { background: var(--g50); }
+/* 홀수(1,3,5): 상단 골드 라인 */
+.flow-step:nth-child(odd) {
+  background: var(--navy);
+}
+.flow-step:nth-child(odd) .flow-step-num { color: rgba(184,147,100,.35); }
+.flow-step:nth-child(odd) .flow-step-badge { color: var(--gold-l); }
+.flow-step:nth-child(odd) .flow-step-title { color: #fff; }
+.flow-step:nth-child(odd) .flow-step-desc { color: rgba(255,255,255,.55); }
+.flow-step:nth-child(odd):hover { background: var(--navy-2); }
+
+.flow-step-num {
+  font-size: 3rem; font-weight: 900;
+  color: rgba(10,28,51,.08); line-height: 1;
+  margin-bottom: 12px; letter-spacing: -.06em;
 }
 .flow-step-badge {
-  font-size: .68rem; font-weight: 700; letter-spacing: .1em;
-  color: var(--gold); text-transform: uppercase; margin-bottom: 8px;
+  font-size: .62rem; font-weight: 700; letter-spacing: .18em;
+  color: var(--gold); text-transform: uppercase; margin-bottom: 10px;
 }
-.flow-title {
-  font-size: 1rem; font-weight: 700; color: var(--navy);
-  margin-bottom: 10px; word-break: keep-all;
+.flow-step-title {
+  font-size: 1.08rem; font-weight: 800; color: var(--navy);
+  margin-bottom: 10px; word-break: keep-all; letter-spacing: -.02em;
 }
-.flow-desc { font-size: .83rem; color: #4a5568; line-height: 1.7; word-break: keep-all; }
-.flow-arrow {
-  position: absolute; right: -14px; top: 50%;
-  transform: translateY(-50%);
-  width: 28px; height: 28px;
-  background: var(--gold); border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  color: #fff; font-size: .8rem; font-weight: 800; z-index: 2;
+.flow-step-desc {
+  font-size: .85rem; color: var(--sub); line-height: 1.75; word-break: keep-all;
 }
-.flow-item:last-child .flow-arrow { display: none; }
+.flow-step-eq {
+  margin-top: 16px;
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: .7rem; font-weight: 700;
+  color: var(--gold); letter-spacing: .06em;
+}
+.flow-step-eq::before {
+  content: ''; width: 16px; height: 1px; background: var(--gold);
+}
 
-/* ── Why Equipment CTA ── */
-.eq-cta-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+/* ══════════════════════════════════════
+   차이점 3카드
+══════════════════════════════════════ */
+.diff-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
 }
-.eq-cta-card {
-  border: 2px solid #e2e8f0; border-radius: var(--rl);
-  padding: 36px 28px; text-align: center;
-  transition: border-color .3s, box-shadow .3s;
+.diff-card {
+  border: 1px solid var(--bdr); border-radius: var(--rl);
+  padding: 36px 32px; text-align: center;
+  transition: border-color .3s, box-shadow .3s, transform .35s;
+  background: #fff;
 }
-.eq-cta-card:hover { border-color: var(--gold); box-shadow: var(--sh-s); }
-.eq-cta-icon {
-  width: 48px; height: 48px; margin: 0 auto 18px;
-  display: flex; align-items: center; justify-content: center;
+.diff-card:hover { border-color: rgba(184,146,74,.4); box-shadow: var(--sh-m); transform: translateY(-4px); }
+.diff-icon {
+  width: 56px; height: 56px; margin: 0 auto 20px;
+  background: var(--g50); border: 1px solid var(--bdr);
+  border-radius: 16px; display: flex; align-items: center; justify-content: center;
+  transition: background .3s;
 }
-.eq-cta-title { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; word-break: keep-all; }
-.eq-cta-desc { font-size: .88rem; color: #4a5568; line-height: 1.75; word-break: keep-all; }
+.diff-card:hover .diff-icon { background: var(--navy); }
+.diff-card:hover .diff-icon svg { stroke: var(--gold-l); }
+.diff-icon svg { transition: stroke .3s; }
+.diff-title { font-size: 1.0rem; font-weight: 800; color: var(--navy); margin-bottom: 10px; word-break: keep-all; }
+.diff-desc { font-size: .88rem; color: var(--sub); line-height: 1.8; word-break: keep-all; }
 
-/* ── Responsive ── */
-@media(max-width:1024px) {
-  .eq-grid { grid-template-columns: repeat(2, 1fr); }
+/* ══════════════════════════════════════
+   SCROLL REVEAL
+══════════════════════════════════════ */
+.rv {
+  opacity: 0; transform: translateY(28px);
+  transition: opacity .8s cubic-bezier(0.16,1,0.3,1), transform .8s cubic-bezier(0.16,1,0.3,1);
+}
+.rv.on { opacity: 1; transform: none; }
+.rv.d1 { transition-delay: .1s; }
+.rv.d2 { transition-delay: .2s; }
+.rv.d3 { transition-delay: .3s; }
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media (max-width: 1024px) {
   .deep-grid { grid-template-columns: 1fr; gap: 40px; }
   .deep-grid.reverse { direction: ltr; }
-  .flow-wrap { flex-direction: column; }
-  .flow-arrow { display: none !important; }
-  .eq-cta-grid { grid-template-columns: 1fr 1fr; }
+  .other-eq-grid { grid-template-columns: 1fr; }
+  .flow-steps { grid-template-columns: repeat(2, 1fr); }
+  .diff-grid { grid-template-columns: 1fr 1fr; }
 }
-@media(max-width:600px) {
-  .eq-grid { grid-template-columns: 1fr; }
-  .eq-cta-grid { grid-template-columns: 1fr; }
+@media (max-width: 640px) {
+  .flow-steps { grid-template-columns: 1fr; }
+  .diff-grid { grid-template-columns: 1fr; }
   .deep-title { font-size: 1.4rem; }
+  .other-eq-item { padding: 28px 24px; }
 }
 </style>
 </head>
 <body>
 <div id="ticker-slot"></div>
 
-<!-- ── Page Hero ── -->
+<!-- ══════════════════════════════════════
+     PAGE HERO
+══════════════════════════════════════ -->
 <section class="page-hero">
   <div class="wrap page-hero-inner rv">
     <div class="page-hero-tag">Equipment</div>
     <h1 class="page-hero-title">첨단 장비</h1>
     <p class="page-hero-sub">
       정확한 처방은 정밀한 장비에서 시작됩니다.<br>
-      조성인 안경원은 전문 임상기관 수준의 검사 장비를 도입하여<br>
+      조성인 안경은 전문 임상기관 수준의 검사 장비를 도입하여<br>
       오차 없는 데이터를 바탕으로 안경을 처방하고 제작합니다.
     </p>
   </div>
 </section>
 
-<!-- ── 보유 장비 Overview ── -->
-<section class="page-sec">
-  <div class="wrap">
-    <div class="s-head rv">
-      <p class="s-sub">EQUIPMENT OVERVIEW</p>
-      <h2 class="s-title">조성인 안경원 보유 장비</h2>
-      <p class="s-desc">
-        안경 처방에서 제작·피팅까지, 각 단계에 최적화된 전문 장비를 갖추고 있습니다.
-      </p>
-    </div>
-    <div class="eq-grid rv">
-      <div class="eq-card">
-        <div class="eq-card-body">
-          <span class="eq-card-tag">Auto Refractor</span>
-          <h3 class="eq-card-title">ZEISS i.Profiler&#174; plus</h3>
-          <p class="eq-card-desc">
-            웨이브프론트 수차분석·각막지형도·동공측정을 단 한 번의 검사로 수행하는
-            ZEISS의 플래그십 자동굴절검사 시스템입니다.
-          </p>
-          <ul class="eq-card-specs">
-            <li>웨이브프론트 고위수차(HOA) 정밀 측정</li>
-            <li>동공 크기 자동 측정 (명소·암소 환경)</li>
-            <li>각막 지형도(Topography) 분석</li>
-            <li>ZEISS 렌즈 설계 데이터와 직접 연동</li>
-          </ul>
-        </div>
-      </div>
-      <div class="eq-card">
-        <div class="eq-card-body">
-          <span class="eq-card-tag">Trial Lens System</span>
-          <h3 class="eq-card-title">CHARMANT 사르망 트라이얼 렌즈</h3>
-          <p class="eq-card-desc">
-            일본 사르망사의 전문 시험렌즈 세트로, 마스터 안경사들이 정밀 처방 확인에
-            사용하는 임상 등급 트라이얼 렌즈 시스템입니다.
-          </p>
-          <ul class="eq-card-specs">
-            <li>정밀 광학 유리 재질, 높은 굴절 정확도</li>
-            <li>구면·원주·프리즘·가입도 렌즈 완비</li>
-            <li>착용감 시뮬레이션으로 처방 전 체험</li>
-            <li>고도수·누진·사시 교정 처방에 필수</li>
-          </ul>
-        </div>
-      </div>
-      <div class="eq-card">
-        <div class="eq-card-body">
-          <span class="eq-card-tag">Phoropter</span>
-          <h3 class="eq-card-title">디지털 포롭터 시스템</h3>
-          <p class="eq-card-desc">
-            전통 수동 포롭터의 한계를 넘어, 디지털 방식으로 미세한 도수 변화를
-            즉각 확인할 수 있는 정밀 타각·자각 굴절 검사 시스템입니다.
-          </p>
-          <ul class="eq-card-specs">
-            <li>0.01D 단위 정밀 도수 조정</li>
-            <li>양안균형·이분리법 검사 지원</li>
-            <li>근거리·원거리 동시 확인</li>
-            <li>사위·복시 교정 검사 기능 포함</li>
-          </ul>
-        </div>
-      </div>
-      <div class="eq-card">
-        <div class="eq-card-body">
-          <span class="eq-card-tag">Pupilometer</span>
-          <h3 class="eq-card-title">디지털 동공간거리 측정기 (PD Meter)</h3>
-          <p class="eq-card-desc">
-            0.1mm 단위까지 좌·우 동공 위치를 정밀하게 측정해 렌즈 광학중심점을
-            정확히 설정하는 전문 장비입니다.
-          </p>
-          <ul class="eq-card-specs">
-            <li>원거리·근거리 각각 독립 PD 측정</li>
-            <li>단안 PD 개별 측정 지원</li>
-            <li>누진다초점 렌즈 피팅에 필수</li>
-            <li>고도수 렌즈 광학중심 오차 최소화</li>
-          </ul>
-        </div>
-      </div>
-      <div class="eq-card">
-        <div class="eq-card-body">
-          <span class="eq-card-tag">Lensometer</span>
-          <h3 class="eq-card-title">자동 렌즈미터</h3>
-          <p class="eq-card-desc">
-            제작된 안경 렌즈의 도수·축·프리즘·광학중심점을 완성 검사하는 장비로
-            완성 안경의 품질 최종 확인에 사용합니다.
-          </p>
-          <ul class="eq-card-specs">
-            <li>완성 안경 도수 자동 측정 및 검증</li>
-            <li>UV 차단 기능 검사 지원</li>
-            <li>누진렌즈 중심·가입도 자동 확인</li>
-            <li>처방 대비 오차 즉시 리포트</li>
-          </ul>
-        </div>
-      </div>
-      <div class="eq-card">
-        <div class="eq-card-body">
-          <span class="eq-card-tag">Fitting System</span>
-          <h3 class="eq-card-title">3D 피팅 포인트 측정 시스템</h3>
-          <p class="eq-card-desc">
-            얼굴 형상·코높이·귀의 위치 등 3차원 피팅 파라미터를 정밀 측정하여
-            누진렌즈 맞춤 제작 데이터를 제공하는 시스템입니다.
-          </p>
-          <ul class="eq-card-specs">
-            <li>착용 각도(Face Form Angle) 자동 측정</li>
-            <li>버텍스 거리(Vertex Distance) 정밀 산출</li>
-            <li>판토스코픽 틸트(Pantoscopic Tilt) 측정</li>
-            <li>개인 맞춤 누진설계 데이터로 활용</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── ZEISS Deep Dive ── -->
+<!-- ══════════════════════════════════════
+     대표 장비 01 — ZEISS i.Profiler® plus
+══════════════════════════════════════ -->
 <section class="page-sec page-sec--off">
   <div class="wrap">
+    <div class="s-head rv" style="margin-bottom:56px;">
+      <p class="s-sub">FLAGSHIP INSTRUMENT</p>
+      <h2 class="s-title">대표 장비</h2>
+      <p class="s-desc">정밀 검안의 핵심, 실제 보유·운용 중인 주요 장비를 소개합니다.</p>
+    </div>
     <div class="deep-grid rv">
       <div class="deep-img-wrap">
-        <img src="img/zeiss-device.jpg" alt="ZEISS i.Profiler plus 정밀 검안 장비" loading="lazy"/>
+        <img src="img/zeiss-device-upload.jpg?v=2" alt="ZEISS i.Profiler plus 정밀 검안 장비" loading="lazy"/>
         <div class="deep-img-badge">ZEISS · i.Profiler&#174; plus</div>
       </div>
       <div>
-        <p class="deep-tag">FLAGSHIP INSTRUMENT</p>
-        <h2 class="deep-title">ZEISS i.Profiler&#174; plus<br>왜 특별한가</h2>
+        <p class="deep-tag">Auto Refractor · Wavefront</p>
+        <h2 class="deep-title">ZEISS i.Profiler&#174; plus<br>웨이브프론트 정밀 분석 시스템</h2>
         <p class="deep-lead">
-          일반 안경원의 자동굴절검사기가 구면·원주도수만 측정한다면,
-          ZEISS i.Profiler&#174;는 웨이브프론트 기술로 <strong>고위수차(Higher-Order Aberrations)</strong>까지
-          분석합니다. 야간 눈부심·빛번짐·야간 시력 저하의 원인을 데이터로 특정할 수 있어
-          더 정밀한 처방이 가능합니다.
+          일반 안경원의 자동굴절검사기가 구면·원주 도수만 측정한다면,
+          ZEISS i.Profiler&#174; plus는 웨이브프론트 기술로
+          <strong>고위수차(HOA)</strong>까지 분석합니다.
+          야간 눈부심·빛번짐·야간 시력 저하의 실제 원인을 데이터로 특정할 수 있어
+          더 정밀하고 근거 있는 처방이 가능합니다.
         </p>
         <ul class="deep-list">
           <li>
             <span class="deep-list-icon">01</span>
             <span class="deep-list-text">
               <strong>웨이브프론트 수차 분석</strong><br>
-              각막·수정체·유리체에서 발생하는 고위수차(코마, 트리포일, 구면수차 등)를
-              측정해 일반 검사에서 잡히지 않는 야간 시력 문제를 파악합니다.
+              코마·트리포일·구면수차 등 고위수차를 정량화해
+              일반 검사에서 잡히지 않는 야간 시력 문제를 파악합니다.
             </span>
           </li>
           <li>
@@ -370,41 +304,44 @@
             <span class="deep-list-text">
               <strong>동공 크기 자동 측정</strong><br>
               밝은 환경(Photopic)과 어두운 환경(Mesopic) 각각의 동공 크기를 측정해
-              누진렌즈 설계 및 야간 운전용 안경 처방의 기준으로 활용합니다.
+              누진렌즈 설계 및 야간 처방의 기준으로 활용합니다.
             </span>
           </li>
           <li>
             <span class="deep-list-icon">03</span>
             <span class="deep-list-text">
               <strong>각막 지형도(Topography)</strong><br>
-              각막의 굴절력 분포를 색상 지도로 시각화해 난시 축의 불규칙성,
-              원추각막 징후, 드라이아이 등 관련 소견을 조기 발견합니다.
+              각막 굴절력 분포를 색상 지도로 시각화해 난시 축의 불규칙성,
+              원추각막 징후, 드라이아이 관련 소견을 조기 발견합니다.
             </span>
           </li>
           <li>
             <span class="deep-list-icon">04</span>
             <span class="deep-list-text">
               <strong>ZEISS 렌즈 직접 연동</strong><br>
-              측정 데이터를 ZEISS VISUFIT·VISUPHOR와 연동해 Individual 설계 렌즈
-              주문 시 고위수차까지 보정하는 개인 맞춤 처방이 가능합니다.
+              측정 데이터를 ZEISS VISUFIT와 연동해 Individual 설계 렌즈 주문 시
+              고위수차까지 보정하는 개인 맞춤 처방이 가능합니다.
             </span>
           </li>
         </ul>
+        <a href="eq-zeiss.html" class="btn btn-navy">ZEISS 장비 상세 보기 &#8594;</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── CHARMANT Deep Dive ── -->
+<!-- ══════════════════════════════════════
+     대표 장비 02 — CHARMANT 트라이얼 렌즈
+══════════════════════════════════════ -->
 <section class="page-sec">
   <div class="wrap">
     <div class="deep-grid reverse rv">
       <div>
-        <p class="deep-tag">CLINICAL TRIAL LENS</p>
-        <h2 class="deep-title">CHARMANT 트라이얼 렌즈<br>처방 전 직접 체험</h2>
+        <p class="deep-tag">Clinical Trial Lens</p>
+        <h2 class="deep-title">CHARMANT 사르망<br>트라이얼 렌즈 시스템</h2>
         <p class="deep-lead">
           누진다초점 렌즈 부적응의 가장 큰 원인은 처방 오차입니다.
-          조성인 안경원은 렌즈 제작 전에 반드시 사르망 트라이얼 렌즈로
+          조성인 안경은 렌즈 제작 전에 반드시 사르망 트라이얼 렌즈로
           실제 착용 상태를 시뮬레이션해 부적응 위험을 선제적으로 차단합니다.
         </p>
         <ul class="deep-list">
@@ -412,7 +349,7 @@
             <span class="deep-list-icon">01</span>
             <span class="deep-list-text">
               <strong>착용 전 도수·가입도 체험</strong><br>
-              누진가입도(Add)를 트라이얼 렌즈로 직접 체험해 어지러움·흔들림 여부를
+              누진 가입도(Add)를 트라이얼 렌즈로 직접 체험해 어지러움·흔들림 여부를
               제작 전에 확인하고 최적 가입도를 결정합니다.
             </span>
           </li>
@@ -420,89 +357,186 @@
             <span class="deep-list-icon">02</span>
             <span class="deep-list-text">
               <strong>고도수 처방 검증</strong><br>
-              &#177;6.00D 이상 고도수에서는 예상 배율·시야 왜곡을 트라이얼 렌즈로
+              ±6.00D 이상 고도수에서는 예상 배율·시야 왜곡을 트라이얼 렌즈로
               미리 경험하게 해 심리적 준비와 정확한 도수 결정을 돕습니다.
             </span>
           </li>
           <li>
             <span class="deep-list-icon">03</span>
             <span class="deep-list-text">
-              <strong>프리즘 교정 안경 처방</strong><br>
+              <strong>프리즘 교정 처방</strong><br>
               사시·사위 교정에 필요한 프리즘 양을 트라이얼 렌즈로 단계적으로 시험해
-              복시 해소에 최적화된 프리즘 처방값을 정밀 결정합니다.
+              복시 해소에 최적화된 처방값을 정밀 결정합니다.
             </span>
           </li>
         </ul>
       </div>
       <div class="deep-img-wrap">
-        <img src="img/trial-lens.jpg" alt="CHARMANT 트라이얼 렌즈 프레임" loading="lazy"/>
-        <div class="deep-img-badge">CHARMANT · Trial Lens Frame</div>
+        <img src="img/case3-hoya-trial.jpg?v=1" alt="CHARMANT 트라이얼 렌즈 프레임 세트" loading="lazy"/>
+        <div class="deep-img-badge">CHARMANT · Trial Lens System</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── 검사~제작 프로세스 플로우 ── -->
+<!-- ══════════════════════════════════════
+     나머지 보유 장비 — 텍스트 리스트 그리드
+══════════════════════════════════════ -->
 <section class="page-sec page-sec--off">
   <div class="wrap">
-    <div class="s-head rv">
+    <div class="s-head rv" style="margin-bottom:48px;">
+      <p class="s-sub">FULL EQUIPMENT LIST</p>
+      <h2 class="s-title">전체 보유 장비</h2>
+      <p class="s-desc">
+        검사부터 제작·완성 검수까지, 각 단계에 최적화된 전문 장비를 갖추고 있습니다.
+      </p>
+    </div>
+    <div class="other-eq-grid rv">
+
+      <div class="other-eq-item">
+        <div class="other-eq-num">01</div>
+        <div class="other-eq-body">
+          <div class="other-eq-tag">Phoropter</div>
+          <h3 class="other-eq-title">디지털 포롭터 시스템</h3>
+          <p class="other-eq-desc">
+            전통 수동 포롭터의 한계를 넘어, 디지털 방식으로 미세한 도수 변화를
+            즉각 확인할 수 있는 정밀 타각·자각 굴절 검사 시스템입니다.
+          </p>
+          <div class="other-eq-specs">
+            <span class="other-eq-spec">0.01D 정밀 조정</span>
+            <span class="other-eq-spec">양안균형 검사</span>
+            <span class="other-eq-spec">사위·복시 교정</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="other-eq-item">
+        <div class="other-eq-num">02</div>
+        <div class="other-eq-body">
+          <div class="other-eq-tag">Pupilometer</div>
+          <h3 class="other-eq-title">디지털 동공간거리 측정기 (PD Meter)</h3>
+          <p class="other-eq-desc">
+            0.1mm 단위까지 좌·우 동공 위치를 정밀하게 측정해 렌즈 광학중심점을
+            정확히 설정하는 전문 장비입니다. 누진다초점 피팅에 필수입니다.
+          </p>
+          <div class="other-eq-specs">
+            <span class="other-eq-spec">원·근거리 독립 측정</span>
+            <span class="other-eq-spec">단안 PD 개별 측정</span>
+            <span class="other-eq-spec">광학중심 오차 최소화</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="other-eq-item">
+        <div class="other-eq-num">03</div>
+        <div class="other-eq-body">
+          <div class="other-eq-tag">Lensometer</div>
+          <h3 class="other-eq-title">자동 렌즈미터</h3>
+          <p class="other-eq-desc">
+            제작된 안경 렌즈의 도수·축·프리즘·광학중심점을 완성 검사하는 장비로
+            완성 안경의 품질을 최종 검수합니다.
+          </p>
+          <div class="other-eq-specs">
+            <span class="other-eq-spec">도수 자동 측정</span>
+            <span class="other-eq-spec">UV 차단 검사</span>
+            <span class="other-eq-spec">누진렌즈 가입도 확인</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="other-eq-item">
+        <div class="other-eq-num">04</div>
+        <div class="other-eq-body">
+          <div class="other-eq-tag">Fitting System</div>
+          <h3 class="other-eq-title">3D 피팅 포인트 측정 시스템</h3>
+          <p class="other-eq-desc">
+            얼굴 형상·코높이·귀 위치 등 3차원 피팅 파라미터를 정밀 측정하여
+            누진렌즈 맞춤 제작 데이터를 제공하는 시스템입니다.
+          </p>
+          <div class="other-eq-specs">
+            <span class="other-eq-spec">Face Form Angle</span>
+            <span class="other-eq-spec">Vertex Distance</span>
+            <span class="other-eq-spec">Pantoscopic Tilt</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     검사부터 완성까지 6단계 프로세스
+══════════════════════════════════════ -->
+<section class="page-sec">
+  <div class="wrap">
+    <div class="s-head rv" style="margin-bottom:48px;">
       <p class="s-sub">PROCESS</p>
       <h2 class="s-title">검사부터 완성까지 6단계</h2>
       <p class="s-desc">
         각 단계에서 전문 장비가 개입해 오차를 줄이고 완성도를 높입니다.
       </p>
     </div>
-    <div class="flow-wrap rv">
-      <div class="flow-item">
-        <div class="flow-num">01</div>
+    <div class="flow-steps rv">
+
+      <div class="flow-step">
+        <div class="flow-step-num">01</div>
         <div class="flow-step-badge">STEP 1</div>
-        <div class="flow-title">사전 문진</div>
-        <div class="flow-desc">착용 목적·생활 패턴·이전 안경 부적응 이력 청취</div>
-        <div class="flow-arrow">&#9654;</div>
+        <div class="flow-step-title">사전 문진</div>
+        <div class="flow-step-desc">착용 목적·생활 패턴·이전 안경 부적응 이력 청취. 고객 상황에 맞는 검사 방향 설정.</div>
+        <span class="flow-step-eq">안경사 직접 문진</span>
       </div>
-      <div class="flow-item">
-        <div class="flow-num">02</div>
+
+      <div class="flow-step">
+        <div class="flow-step-num">02</div>
         <div class="flow-step-badge">STEP 2</div>
-        <div class="flow-title">ZEISS 정밀 검사</div>
-        <div class="flow-desc">웨이브프론트·각막지형도·동공 크기 자동 측정</div>
-        <div class="flow-arrow">&#9654;</div>
+        <div class="flow-step-title">ZEISS 정밀 검사</div>
+        <div class="flow-step-desc">웨이브프론트·각막지형도·동공 크기 자동 측정. 고위수차 분석으로 일반 검사가 놓치는 원인 파악.</div>
+        <span class="flow-step-eq">ZEISS i.Profiler® plus</span>
       </div>
-      <div class="flow-item">
-        <div class="flow-num">03</div>
+
+      <div class="flow-step">
+        <div class="flow-step-num">03</div>
         <div class="flow-step-badge">STEP 3</div>
-        <div class="flow-title">포롭터 자각검사</div>
-        <div class="flow-desc">디지털 포롭터로 최종 도수·축·가입도 결정</div>
-        <div class="flow-arrow">&#9654;</div>
+        <div class="flow-step-title">포롭터 자각 검사</div>
+        <div class="flow-step-desc">디지털 포롭터로 최종 도수·축·가입도를 정밀 결정. 양안균형 및 이분리법 검사 병행.</div>
+        <span class="flow-step-eq">디지털 포롭터</span>
       </div>
-      <div class="flow-item">
-        <div class="flow-num">04</div>
+
+      <div class="flow-step">
+        <div class="flow-step-num">04</div>
         <div class="flow-step-badge">STEP 4</div>
-        <div class="flow-title">트라이얼 체험</div>
-        <div class="flow-desc">CHARMANT 트라이얼 렌즈로 착용감 사전 확인</div>
-        <div class="flow-arrow">&#9654;</div>
+        <div class="flow-step-title">트라이얼 렌즈 체험</div>
+        <div class="flow-step-desc">CHARMANT 트라이얼 렌즈로 착용감 사전 확인. 누진 가입도·고도수 배율감을 제작 전 체험.</div>
+        <span class="flow-step-eq">CHARMANT Trial Lens</span>
       </div>
-      <div class="flow-item">
-        <div class="flow-num">05</div>
+
+      <div class="flow-step">
+        <div class="flow-step-num">05</div>
         <div class="flow-step-badge">STEP 5</div>
-        <div class="flow-title">3D 피팅 측정</div>
-        <div class="flow-desc">얼굴 형상 데이터 기반 누진 설계 파라미터 산출</div>
-        <div class="flow-arrow">&#9654;</div>
+        <div class="flow-step-title">3D 피팅 측정</div>
+        <div class="flow-step-desc">얼굴 형상 데이터 기반 누진 설계 파라미터 산출. 착용 각도·버텍스 거리를 개별 측정.</div>
+        <span class="flow-step-eq">3D 피팅 시스템</span>
       </div>
-      <div class="flow-item">
-        <div class="flow-num">06</div>
+
+      <div class="flow-step">
+        <div class="flow-step-num">06</div>
         <div class="flow-step-badge">STEP 6</div>
-        <div class="flow-title">완성 검사</div>
-        <div class="flow-desc">렌즈미터로 완성 안경 도수·광학중심 최종 검증</div>
-        <div class="flow-arrow">&#9654;</div>
+        <div class="flow-step-title">완성 검사</div>
+        <div class="flow-step-desc">렌즈미터로 완성 안경의 도수·광학중심·프리즘을 최종 검증. 처방 대비 오차 제로 확인 후 출고.</div>
+        <span class="flow-step-eq">자동 렌즈미터</span>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- ── 장비가 만드는 차이 ── -->
-<section class="page-sec">
+<!-- ══════════════════════════════════════
+     장비가 만드는 실질적 차이
+══════════════════════════════════════ -->
+<section class="page-sec page-sec--off">
   <div class="wrap">
-    <div class="s-head rv">
+    <div class="s-head rv" style="margin-bottom:48px;">
       <p class="s-sub">WHY IT MATTERS</p>
       <h2 class="s-title">장비가 만드는 실질적 차이</h2>
       <p class="s-desc">
@@ -510,65 +544,71 @@
         처방의 정확성과 착용 만족도를 결정합니다.
       </p>
     </div>
-    <div class="eq-cta-grid rv">
-      <div class="eq-cta-card">
-        <div class="eq-cta-icon">
-          <svg viewBox="0 0 48 48" fill="none" stroke="#0b1f3a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="48" height="48">
+    <div class="diff-grid rv">
+
+      <div class="diff-card">
+        <div class="diff-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="#0b1f3a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="36" height="36">
             <path d="M12 34 C12 22 18 14 24 14 C30 14 36 22 36 34"/>
             <path d="M18 34 C18 26 20.5 20 24 20 C27.5 20 30 26 30 34"/>
             <line x1="12" y1="34" x2="36" y2="34"/>
             <line x1="24" y1="8" x2="24" y2="12"/>
           </svg>
         </div>
-        <div class="eq-cta-title">누진다초점 부적응 최소화</div>
-        <div class="eq-cta-desc">
+        <div class="diff-title">누진다초점 부적응 최소화</div>
+        <div class="diff-desc">
           트라이얼 체험 + 3D 피팅 파라미터 측정으로
           누진 부적응의 주요 원인인 가입도 오차와
           피팅 파라미터 오류를 선제적으로 차단합니다.
         </div>
       </div>
-      <div class="eq-cta-card">
-        <div class="eq-cta-icon">
-          <svg viewBox="0 0 48 48" fill="none" stroke="#0b1f3a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="48" height="48">
+
+      <div class="diff-card">
+        <div class="diff-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="#0b1f3a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="36" height="36">
             <path d="M8 24 Q14 12 24 12 Q34 12 40 24 Q34 36 24 36 Q14 36 8 24Z"/>
             <circle cx="24" cy="24" r="5"/>
             <circle cx="24" cy="24" r="2" fill="#0b1f3a" stroke="none"/>
           </svg>
         </div>
-        <div class="eq-cta-title">야간·고도수 시력 최적화</div>
-        <div class="eq-cta-desc">
+        <div class="diff-title">야간·고도수 시력 최적화</div>
+        <div class="diff-desc">
           ZEISS 웨이브프론트 데이터로 야간 눈부심·빛번짐을
           유발하는 고위수차를 파악하고, 개인 맞춤
           렌즈 설계에 반영합니다.
         </div>
       </div>
-      <div class="eq-cta-card">
-        <div class="eq-cta-icon">
-          <svg viewBox="0 0 48 48" fill="none" stroke="#0b1f3a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="48" height="48">
+
+      <div class="diff-card">
+        <div class="diff-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="#0b1f3a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="36" height="36">
             <rect x="12" y="16" width="24" height="20" rx="3"/>
             <path d="M18 16 L18 13 Q18 9 24 9 Q30 9 30 13 L30 16"/>
             <path d="M19 27 L22 30 L29 23" stroke-width="1.8"/>
           </svg>
         </div>
-        <div class="eq-cta-title">데이터 기반 처방 근거</div>
-        <div class="eq-cta-desc">
-          주관적 자각검사에만 의존하지 않고 객관적
+        <div class="diff-title">데이터 기반 처방 근거</div>
+        <div class="diff-desc">
+          주관적 자각 검사에만 의존하지 않고 객관적
           계측 데이터를 함께 활용해 처방의 신뢰도를
           높이고 재방문 시 비교 분석이 가능합니다.
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- ── CTA ── -->
+<!-- ══════════════════════════════════════
+     CTA
+══════════════════════════════════════ -->
 <section class="page-sec page-sec--dark" style="padding:80px 0;">
   <div class="wrap" style="text-align:center;">
-    <p class="s-sub" style="color:var(--gold); margin-bottom:12px;">RESERVATION</p>
-    <h2 style="font-size:2rem; font-weight:800; color:#fff; margin-bottom:16px; word-break:keep-all;">
+    <p class="s-sub" style="color:var(--gold-l); margin-bottom:12px;">RESERVATION</p>
+    <h2 style="font-size:clamp(1.6rem,2.8vw,2.2rem); font-weight:800; color:#fff; margin-bottom:16px; word-break:keep-all; letter-spacing:-.03em;">
       장비가 아닌 결과로 증명합니다
     </h2>
-    <p style="color:rgba(255,255,255,.75); font-size:1rem; line-height:1.8; margin-bottom:36px; word-break:keep-all;">
+    <p style="color:rgba(255,255,255,.62); font-size:1rem; line-height:1.9; margin-bottom:36px; word-break:keep-all;">
       최신 장비와 20년 임상 경험이 만나는 곳.<br>
       지금 정밀 시력검사를 예약해 보세요.
     </p>

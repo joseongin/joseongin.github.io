@@ -1,5 +1,5 @@
 /* ============================================================
-   조성인 안경원 — Main JavaScript
+   조성인 안경 — Main JavaScript
    Premium Clinical Optical
    ============================================================ */
 
@@ -222,5 +222,5 @@ document.querySelectorAll('img').forEach(img => {
   });
 });
 
-console.log('%c조성인 안경원', 'color:#0b1f3a;font-size:18px;font-weight:900;');
+console.log('%c조성인 안경', 'color:#0b1f3a;font-size:18px;font-weight:900;');
 console.log('%c임상 전문성과 정밀함의 차이', 'color:#c9a96e;font-size:12px;');
