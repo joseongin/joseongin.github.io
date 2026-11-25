@@ -6,23 +6,18 @@
 <meta http-equiv="Pragma" content="no-cache"/>
 <meta http-equiv="Expires" content="0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>ZEISS i.Profiler® plus — 조성인 안경</title>
-<meta name="description" content="ZEISS i.Profiler® plus: 웨이브프론트 수차분석, 각막지형도, 동공측정을 단 한 번에. 대전 조성인 안경의 플래그십 정밀 검사 장비를 소개합니다."/>
+<title>ZEISS i.Profiler® plus — 조성인안경원</title>
+<meta property="og:site_name" content="조성인안경원"/>
+<meta name="description" content="ZEISS i.Profiler® plus: 웨이브프론트 수차분석, 각막지형도, 동공측정을 단 한 번에. 대전 조성인안경원의 플래그십 정밀 검사 장비를 소개합니다."/>
 <link rel="icon" href="favicon.ico"/>
-<link rel="stylesheet" href="css/common.css?v=20260724b"/>
+<link rel="stylesheet" href="css/common.css?v=20261125"/>
 <style>
 
 /* ── Hero ── */
 .eq-hero {
-  padding: calc(var(--nav-h) + 72px) 0 80px;
-  background: linear-gradient(140deg, var(--navy) 0%, #0e2a4a 60%, #132040 100%);
+  padding: clamp(46px, 6vw, 80px) 0;
+  background: var(--navy);
   position: relative; overflow: hidden;
-}
-.eq-hero::after {
-  content: '';
-  position: absolute; inset: 0;
-  background: radial-gradient(ellipse 55% 80% at 80% 50%, rgba(184,147,100,.13) 0%, transparent 65%);
-  pointer-events: none;
 }
 .eq-hero-inner {
   max-width: var(--max-w); margin: 0 auto; padding: 0 var(--px);
@@ -30,7 +25,7 @@
   display: grid; grid-template-columns: 1fr 480px; gap: 72px; align-items: center;
 }
 .eq-hero-eyebrow {
-  font-size: .72rem; font-weight: 700; letter-spacing: .22em;
+  font-size: .72rem; font-weight: 700; letter-spacing: .09em;
   color: var(--gold-l); text-transform: uppercase; margin-bottom: 20px;
   display: flex; align-items: center; gap: 10px;
 }
@@ -40,11 +35,11 @@
 }
 .eq-hero-title {
   font-size: clamp(2.1rem, 4vw, 3.4rem);
-  font-weight: 900; color: #fff;
+  font-weight: 650; color: #fff;
   line-height: 1.18; letter-spacing: -.042em;
   margin-bottom: 22px; word-break: keep-all;
 }
-.eq-hero-title em { font-style: normal; color: var(--gold-l); }
+.eq-hero-title em { font-style: normal; color: #eee5d8; }
 .eq-hero-desc {
   font-size: 1.06rem; color: rgba(255,255,255,.68);
   line-height: 2.0; word-break: keep-all; margin-bottom: 36px;
@@ -54,14 +49,14 @@
 .badge {
   padding: 7px 16px;
   background: rgba(184,147,100,.14); border: 1px solid rgba(184,147,100,.32);
-  border-radius: 30px; font-size: .77rem; font-weight: 700;
+  border-radius: var(--r); font-size: .77rem; font-weight: 700;
   color: var(--gold-l); letter-spacing: .04em;
 }
 
 /* Hero 이미지 */
 .eq-hero-img {
   border-radius: var(--rl); overflow: hidden;
-  box-shadow: 0 28px 72px rgba(0,0,0,.45), 0 0 0 1px rgba(255,255,255,.06);
+
   position: relative;
 }
 .eq-hero-img img {
@@ -89,7 +84,7 @@
 .spec-grid {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px;
   background: var(--g100); border-radius: var(--rl); overflow: hidden;
-  box-shadow: var(--sh-s);
+
 }
 .spec-card {
   background: #fff; padding: 36px 24px; text-align: center;
@@ -97,7 +92,7 @@
 }
 .spec-card:hover { background: var(--g50); }
 .spec-num {
-  font-size: 2.6rem; font-weight: 900; color: var(--navy);
+  font-size: 2.6rem; font-weight: 700; color: var(--navy);
   letter-spacing: -.05em; line-height: 1; margin-bottom: 8px;
 }
 .spec-unit { font-size: .72rem; font-weight: 700; color: var(--gold); letter-spacing: .1em; text-transform: uppercase; }
@@ -109,14 +104,13 @@
 }
 .feat-card {
   background: #fff; border-radius: var(--rl); padding: 42px 38px;
-  box-shadow: var(--sh-s);
+
   border-top: 3px solid var(--navy);
   transition: border-top-color .25s, box-shadow .25s, transform .25s;
 }
 .feat-card:hover {
   border-top-color: var(--gold);
-  box-shadow: var(--sh-m);
-  transform: translateY(-4px);
+
 }
 .feat-icon {
   width: 50px; height: 50px; margin-bottom: 22px;
@@ -129,7 +123,7 @@
   letter-spacing: .12em; margin-bottom: 12px; text-transform: uppercase;
 }
 .feat-title {
-  font-size: 1.15rem; font-weight: 800; color: var(--navy);
+  font-size: 1.15rem; font-weight: 700; color: var(--navy);
   margin-bottom: 14px; word-break: keep-all; line-height: 1.4;
 }
 .feat-desc {
@@ -146,12 +140,12 @@
 }
 .device-img-wrap {
   border-radius: var(--rl); overflow: hidden;
-  box-shadow: var(--sh-m);
+
   background: #1a1a1a;
   position: relative;
 }
 .device-img-wrap::after {
-  content: '조성인 안경 실제 보유 장비';
+  content: '조성인안경원 실제 보유 장비';
   position: absolute; bottom: 0; left: 0; right: 0;
   padding: 12px 20px;
   background: linear-gradient(to top, rgba(0,0,0,.72) 0%, transparent 100%);
@@ -163,13 +157,13 @@
   object-fit: cover; aspect-ratio: 3/4;
   transition: transform .5s cubic-bezier(.4,0,.2,1);
 }
-.device-img-wrap:hover img { transform: scale(1.04); }
+
 .device-tag {
   font-size: .72rem; font-weight: 700; letter-spacing: .16em;
   color: var(--gold); text-transform: uppercase; margin-bottom: 16px;
 }
 .device-title {
-  font-size: 1.9rem; font-weight: 900; color: var(--navy);
+  font-size: 1.9rem; font-weight: 700; color: var(--navy);
   line-height: 1.28; letter-spacing: -.04em; word-break: keep-all;
   margin-bottom: 18px;
 }
@@ -198,7 +192,7 @@
 .compare-wrap { overflow-x: auto; }
 .compare-table {
   width: 100%; border-collapse: separate; border-spacing: 0;
-  border-radius: var(--rl); overflow: hidden; box-shadow: var(--sh-s);
+  border-radius: var(--rl); overflow: hidden;
 }
 .compare-table th {
   padding: 20px 28px; font-size: .85rem; font-weight: 700;
@@ -237,11 +231,11 @@
   width: 44px; height: 44px; border-radius: 50%;
   background: var(--navy); color: var(--gold-l);
   display: flex; align-items: center; justify-content: center;
-  font-size: .8rem; font-weight: 800; flex-shrink: 0; z-index: 1;
+  font-size: .8rem; font-weight: 700; flex-shrink: 0; z-index: 1;
 }
 .process-body { padding: 8px 0 52px 32px; }
 .process-tag { font-size: .7rem; font-weight: 700; color: var(--gold); letter-spacing: .1em; margin-bottom: 8px; text-transform: uppercase; }
-.process-title { font-size: 1.06rem; font-weight: 800; color: var(--navy); margin-bottom: 10px; word-break: keep-all; }
+.process-title { font-size: 1.06rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; word-break: keep-all; }
 .process-desc { font-size: .93rem; color: var(--sub); line-height: 2.0; word-break: keep-all; letter-spacing: .008em; }
 
 /* ── Who Benefits ── */
@@ -252,11 +246,11 @@
   background: #fff; border-radius: var(--r);
   padding: 28px 26px;
   border-left: 3px solid var(--gold);
-  box-shadow: var(--sh-s);
+
   transition: var(--tr);
 }
-.who-card:hover { transform: translateY(-3px); box-shadow: var(--sh-m); }
-.who-card strong { color: var(--navy); display: block; margin-bottom: 10px; font-size: .97rem; font-weight: 800; line-height: 1.4; word-break: keep-all; }
+
+.who-card strong { color: var(--navy); display: block; margin-bottom: 10px; font-size: .97rem; font-weight: 700; line-height: 1.4; word-break: keep-all; }
 .who-card p { font-size: .9rem; color: var(--sub); line-height: 1.85; word-break: keep-all; letter-spacing: .008em; }
 
 /* ── CTA Dark ── */
@@ -304,7 +298,7 @@
 <div id="ticker-slot"></div>
 
 <!-- ── Breadcrumb ── -->
-<nav class="breadcrumb" style="margin-top:var(--nav-h);">
+<nav class="breadcrumb">
   <div class="breadcrumb-inner">
     <a href="index.html">Home</a>
     <span class="breadcrumb-sep">›</span>
@@ -383,10 +377,10 @@
   <div class="wrap">
     <div class="device-grid rv">
       <div class="device-img-wrap">
-        <img src="img/zeiss-store.jpg" alt="조성인 안경 실제 ZEISS i.Profiler® plus 장비"/>
+        <img src="img/zeiss-store.jpg" alt="조성인안경원 실제 ZEISS i.Profiler® plus 장비"/>
       </div>
       <div>
-        <p class="device-tag">조성인 안경 · 실제 보유 장비</p>
+        <p class="device-tag">조성인안경원 · 실제 보유 장비</p>
         <h2 class="device-title">왜 ZEISS i.Profiler&#174; plus인가</h2>
         <p class="device-desc">
           일반 자동굴절검사기가 구면·원주 도수만 측정하는 데 그친다면,
@@ -669,12 +663,12 @@
     <h2 class="s-title s-title--lt">ZEISS 정밀검사를 받아보세요</h2>
     <p class="s-sub s-sub--lt" style="max-width:560px; margin:0 auto;">
       데이터로 근거를 만들고, 데이터로 처방합니다.<br>
-      조성인 안경에서 ZEISS i.Profiler&#174; plus 정밀검사를 경험해 보세요.
+      조성인안경원에서 ZEISS i.Profiler&#174; plus 정밀검사를 경험해 보세요.
     </p>
   </div>
 </section>
 
-<script src="js/components.js"></script>
-<script src="js/common.js"></script>
+<script src="js/components.js?v=20261125"></script>
+<script src="js/common.js?v=20261125"></script>
 </body>
 </html>

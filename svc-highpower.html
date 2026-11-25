@@ -6,20 +6,17 @@
 <meta http-equiv="Pragma" content="no-cache"/>
 <meta http-equiv="Expires" content="0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>고도수 안경 — 조성인 안경</title>
+<title>고도수 안경 — 조성인안경원</title>
+<meta property="og:site_name" content="조성인안경원"/>
 <meta name="description" content="±6D 이상 고도근시·고도난시 정밀 맞춤 제작. 최소 두께·경량화·야간 수차 보정·광학중심 0.1mm 설정으로 고도수 안경을 완성합니다."/>
 <link rel="icon" href="favicon.ico"/>
-<link rel="stylesheet" href="css/common.css?v=20260724b"/>
+<link rel="stylesheet" href="css/common.css?v=20261125"/>
 <style>
 /* ── Hero ── */
 .svc-hero {
-  padding: calc(var(--nav-h) + 80px) 0 80px;
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-3) 100%);
+  padding: clamp(46px, 6vw, 80px) 0;
+  background: var(--navy);
   position: relative; overflow: hidden;
-}
-.svc-hero::before {
-  content: ''; position: absolute; inset: 0;
-  background: radial-gradient(ellipse at 70% 50%, rgba(184,147,100,.12) 0%, transparent 60%);
 }
 .svc-hero-inner {
   max-width: var(--max-w); margin: 0 auto; padding: 0 var(--px);
@@ -27,14 +24,14 @@
   display: grid; grid-template-columns: 1fr 380px; gap: 64px; align-items: center;
 }
 .svc-hero-eyebrow {
-  font-size: .72rem; font-weight: 700; letter-spacing: .2em;
+  font-size: .72rem; font-weight: 700; letter-spacing: .09em;
   color: var(--gold-l); text-transform: uppercase; margin-bottom: 18px;
 }
 .svc-hero-title {
-  font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 900; color: #fff;
+  font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 650; color: #fff;
   line-height: 1.2; letter-spacing: -.04em; margin-bottom: 22px; word-break: keep-all;
 }
-.svc-hero-title em { font-style: normal; color: var(--gold-l); }
+.svc-hero-title em { font-style: normal; color: #eee5d8; }
 .svc-hero-desc {
   font-size: 1.05rem; color: rgba(255,255,255,.72);
   line-height: 1.9; word-break: keep-all; margin-bottom: 36px;
@@ -45,7 +42,7 @@
 }
 .range-item { display: flex; align-items: center; justify-content: space-between; }
 .range-label { font-size: .82rem; color: rgba(255,255,255,.6); font-weight: 500; }
-.range-val { font-size: 1.1rem; font-weight: 800; color: var(--gold-l); }
+.range-val { font-size: 1.1rem; font-weight: 700; color: var(--gold-l); }
 .range-divider { height: 1px; background: rgba(255,255,255,.1); }
 
 /* ── Breadcrumb ── */
@@ -64,7 +61,7 @@
 /* ── Challenge + Solution Split ── */
 .cs-grid {
   display: grid; grid-template-columns: 1fr 1fr; gap: 3px;
-  border-radius: var(--rl); overflow: hidden; box-shadow: var(--sh-m);
+  border-radius: var(--rl); overflow: hidden;
 }
 .cs-col { padding: 44px 40px; }
 .cs-col.challenge { background: var(--off); }
@@ -90,11 +87,11 @@
 }
 .prec-card {
   text-align: center; background: #fff; border-radius: var(--rl);
-  padding: 36px 24px; box-shadow: var(--sh-s);
+  padding: 36px 24px;
   border-bottom: 3px solid transparent;
   transition: border-color .25s, transform .25s;
 }
-.prec-card:hover { border-bottom-color: var(--gold); transform: translateY(-4px); }
+.prec-card:hover { border-bottom-color: var(--gold); }
 .prec-icon {
   width: 56px; height: 56px; border-radius: 50%;
   background: var(--g50); margin: 0 auto 18px;
@@ -102,13 +99,13 @@
 }
 .prec-icon svg { width: 26px; height: 26px; stroke: var(--navy); fill: none; stroke-width: 1.8; }
 .prec-num { font-size: .7rem; font-weight: 700; color: var(--gold); letter-spacing: .1em; margin-bottom: 10px; }
-.prec-title { font-size: .98rem; font-weight: 800; color: var(--navy); margin-bottom: 10px; word-break: keep-all; }
+.prec-title { font-size: .98rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; word-break: keep-all; }
 .prec-desc { font-size: .85rem; color: var(--sub); line-height: 1.75; word-break: keep-all; }
 
 /* ── Refraction Index Guide ── */
 .index-table {
   width: 100%; border-collapse: separate; border-spacing: 0;
-  border-radius: var(--rl); overflow: hidden; box-shadow: var(--sh-s);
+  border-radius: var(--rl); overflow: hidden;
 }
 .index-table th {
   padding: 16px 20px; font-size: .82rem; font-weight: 700;
@@ -128,7 +125,7 @@
 
 /* ── Who ── */
 .who-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-.who-card { background: #fff; border-radius: var(--r); padding: 24px 22px; box-shadow: var(--sh-s); border-left: 3px solid var(--gold); }
+.who-card { background: #fff; border-radius: var(--r); padding: 24px 22px; border-left: 3px solid var(--gold); }
 .who-card strong { display: block; color: var(--navy); margin-bottom: 6px; font-size: .95rem; word-break: keep-all; }
 .who-card p { font-size: .88rem; color: var(--sub); line-height: 1.75; word-break: keep-all; }
 
@@ -177,7 +174,7 @@
 <div id="ticker-slot"></div>
 
 <!-- ── Breadcrumb ── -->
-<nav class="breadcrumb" style="margin-top:var(--nav-h);">
+<nav class="breadcrumb">
   <div class="breadcrumb-inner">
     <a href="index.html">Home</a>
     <span class="breadcrumb-sep">›</span>
@@ -244,7 +241,7 @@
         </ul>
       </div>
       <div class="cs-col solution">
-        <div class="cs-head">조성인 안경의 해법</div>
+        <div class="cs-head">조성인안경원의 해법</div>
         <ul class="cs-list">
           <li><span class="cs-icon" style="color:var(--gold);">✓</span>디지털 PD 측정기로 0.1mm 단위 광학중심 정밀 설정</li>
           <li><span class="cs-icon" style="color:var(--gold);">✓</span>1.74~1.76 최고굴절률 렌즈 + 최소화 설계로 두께 감소</li>
@@ -395,12 +392,12 @@
     <h2 class="s-title s-title--lt">고도수 안경, 이제 제대로</h2>
     <p class="s-sub s-sub--lt" style="margin-bottom:40px;">
       고도수일수록 정밀한 처방과 피팅이 중요합니다.<br>
-      조성인 안경의 고도수 전문 프로세스로 만나보세요.
+      조성인안경원의 고도수 전문 프로세스로 만나보세요.
     </p>
   </div>
 </section>
 
-<script src="js/components.js"></script>
-<script src="js/common.js"></script>
+<script src="js/components.js?v=20261125"></script>
+<script src="js/common.js?v=20261125"></script>
 </body>
 </html>

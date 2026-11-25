@@ -1,5 +1,5 @@
 /* ============================================================
-   공통 컴포넌트 주입 — v2 (English Nav + Dropdown + No Nav CTA)
+   조성인안경원 — 공통 컴포넌트
 ============================================================ */
 (function () {
 
@@ -9,7 +9,7 @@
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
       <span class="nav-logo-mark" aria-hidden="true">
-        <svg viewBox="0 0 62 34" fill="none" stroke="#0a1c33" stroke-width="2.6" stroke-linecap="round">
+        <svg viewBox="0 0 62 34" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round">
           <circle cx="15" cy="19" r="11"/>
           <circle cx="47" cy="19" r="11"/>
           <path d="M26 16 Q31 12 36 16"/>
@@ -18,8 +18,8 @@
         </svg>
       </span>
       <span class="nav-logo-txt">
-        <span class="nav-logo-main">조성인 안경</span>
-        <span class="nav-logo-sub">JOSEONGIN OPTICAL · DAEJEON</span>
+        <span class="nav-logo-main">조성인안경원</span>
+        <span class="nav-logo-sub">대전 둔산동</span>
       </span>
     </a>
 
@@ -68,13 +68,13 @@
 
     </nav>
 
-    <button class="hamburger" id="hbg" aria-label="메뉴 열기">
+    <button class="hamburger" id="hbg" aria-label="메뉴 열기" aria-controls="drawer" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
 
-<div class="drawer" id="drawer" role="dialog" aria-label="모바일 메뉴">
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="모바일 메뉴" inert>
   <div class="drawer-inner">
     <button class="drawer-close" id="drawerClose" aria-label="닫기">&#10005;</button>
 
@@ -107,7 +107,7 @@
   <div class="footer-top">
     <div class="footer-top-in">
       <div>
-        <p class="footer-brand-name">조성인 안경</p>
+        <p class="footer-brand-name">조성인안경원</p>
         <p class="footer-brand-sub">Clinical Precision &amp; Mastery<br>임상 전문성과 정밀함의 차이</p>
       </div>
       <div class="footer-info">
@@ -124,7 +124,7 @@
     </div>
   </div>
   <div class="footer-bot">
-    <p>&#169; 2026 조성인 안경. All rights reserved.</p>
+    <p>&#169; 2026 조성인안경원. All rights reserved.</p>
   </div>
 </footer>`;
 
@@ -143,7 +143,7 @@
 <div class="sticky-bar" id="stickyBar">
   <div class="sticky-bar-in">
     <div class="sticky-bar-txt">
-      <strong>조성인 안경</strong>
+      <strong>조성인안경원</strong>
       <span>정밀한 시력검사 · 0507-1439-0078</span>
     </div>
     <a href="https://m.booking.naver.com/booking/13/bizes/819206/items/4948017?area=bmp&lang=ko&service-target=map-pc&startDate=2026-05-18&theme=place"
@@ -153,12 +153,12 @@
 
   /* ── MODAL (네이버 예약 단일 채널) ── */
   const MODAL_HTML = `
-<div class="modal" id="modal" onclick="if(event.target===this)closeModal()">
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="reservation-title" inert>
   <div class="modal-box">
-    <button class="modal-close" onclick="closeModal()" aria-label="닫기">&#10005;</button>
+    <button class="modal-close" aria-label="닫기">&#10005;</button>
     <div class="modal-hd">
       <span class="modal-tag">RESERVATION</span>
-      <h3>네이버로 예약하기</h3>
+      <h3 id="reservation-title">네이버로 예약하기</h3>
       <p>원하시는 날짜와 시간을 선택하면 즉시 예약이 완료됩니다</p>
     </div>
     <div class="modal-opts">
@@ -181,26 +181,16 @@
   const TICKER_HTML = `
 <div class="ticker">
   <div class="ticker-track">
-    <span>Clinical Precision</span><span class="ticker-dot">&#9670;</span>
-    <span>ZEISS i.Profiler&#174;</span><span class="ticker-dot">&#9670;</span>
-    <span>정밀검안</span><span class="ticker-dot">&#9670;</span>
-    <span>누진다초점 전문</span><span class="ticker-dot">&#9670;</span>
-    <span>Optometrist 3rd Gen.</span><span class="ticker-dot">&#9670;</span>
-    <span>고도수 안경</span><span class="ticker-dot">&#9670;</span>
-    <span>대전보건대 특강 교수</span><span class="ticker-dot">&#9670;</span>
-    <span>Fitting Master</span><span class="ticker-dot">&#9670;</span>
-    <span>성장기 근시 억제</span><span class="ticker-dot">&#9670;</span>
-    <span>임상 전문성</span><span class="ticker-dot">&#9670;</span>
-    <span>Clinical Precision</span><span class="ticker-dot">&#9670;</span>
-    <span>ZEISS i.Profiler&#174;</span><span class="ticker-dot">&#9670;</span>
-    <span>정밀검안</span><span class="ticker-dot">&#9670;</span>
-    <span>누진다초점 전문</span><span class="ticker-dot">&#9670;</span>
-    <span>Optometrist 3rd Gen.</span><span class="ticker-dot">&#9670;</span>
-    <span>고도수 안경</span><span class="ticker-dot">&#9670;</span>
-    <span>대전보건대 특강 교수</span><span class="ticker-dot">&#9670;</span>
-    <span>Fitting Master</span><span class="ticker-dot">&#9670;</span>
-    <span>성장기 근시 억제</span><span class="ticker-dot">&#9670;</span>
-    <span>임상 전문성</span><span class="ticker-dot">&#9670;</span>
+    <span>Clinical Precision</span><span class="ticker-dot" aria-hidden="true">&#9670;</span>
+    <span>ZEISS i.Profiler&#174;</span><span class="ticker-dot" aria-hidden="true">&#9670;</span>
+    <span>정밀검안</span><span class="ticker-dot" aria-hidden="true">&#9670;</span>
+    <span>누진다초점 전문</span><span class="ticker-dot" aria-hidden="true">&#9670;</span>
+    <span>Optometrist 3rd Gen.</span><span class="ticker-dot" aria-hidden="true">&#9670;</span>
+    <span>고도수 안경</span><span class="ticker-dot" aria-hidden="true">&#9670;</span>
+    <span>대전보건대 특강 교수</span><span class="ticker-dot" aria-hidden="true">&#9670;</span>
+    <span>Fitting Master</span><span class="ticker-dot" aria-hidden="true">&#9670;</span>
+    <span>성장기 근시 억제</span><span class="ticker-dot" aria-hidden="true">&#9670;</span>
+    <span>임상 전문성</span><span class="ticker-dot" aria-hidden="true">&#9670;</span>
   </div>
 </div>`;
 
@@ -212,118 +202,5 @@
     document.body.insertAdjacentHTML('beforeend',
       FLOAT_HTML + STICKY_HTML + MODAL_HTML + FOOTER_HTML
     );
-
-    /* ── Hamburger / Drawer ── */
-    const hbg        = document.getElementById('hbg');
-    const drawer     = document.getElementById('drawer');
-    const drawerBd   = document.getElementById('drawerBd');
-    const drawerClose = document.getElementById('drawerClose');
-
-    function openDrawer() {
-      drawer.classList.add('open');
-      drawerBd.classList.add('open');
-      hbg.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeDrawer() {
-      drawer.classList.remove('open');
-      drawerBd.classList.remove('open');
-      hbg.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-    window.closeDrawer = closeDrawer;
-
-    if (hbg) hbg.addEventListener('click', function () {
-      drawer.classList.contains('open') ? closeDrawer() : openDrawer();
-    });
-    if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
-    if (drawerBd)    drawerBd.addEventListener('click', closeDrawer);
-
-    /* ── Custom Cursor ── */
-    initCustomCursor();
   });
-
-  function initCustomCursor() {
-    // 터치 디바이스 / 마우스 없는 환경에서는 건너뜀
-    if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
-
-    // 커서 요소 생성
-    const ring = document.createElement('div');
-    ring.id = 'cursor-ring';
-    const dot  = document.createElement('div');
-    dot.id  = 'cursor-dot';
-    document.body.appendChild(ring);
-    document.body.appendChild(dot);
-
-    let mx = -200, my = -200;    // 마우스 실제 위치
-    let rx = -200, ry = -200;    // ring 현재 위치 (래그)
-    let raf;
-
-    // 링은 래그를 두어 부드럽게 따라오게
-    function animateRing() {
-      rx += (mx - rx) * 0.18;
-      ry += (my - ry) * 0.18;
-      ring.style.left = rx + 'px';
-      ring.style.top  = ry + 'px';
-      raf = requestAnimationFrame(animateRing);
-    }
-    animateRing();
-
-    document.addEventListener('mousemove', function (e) {
-      mx = e.clientX;
-      my = e.clientY;
-      dot.style.left = mx + 'px';
-      dot.style.top  = my + 'px';
-
-      // 다크 배경(히어로) 판단
-      const el = document.elementFromPoint(mx, my);
-      if (el) {
-        const hero = el.closest('.hero, .page-hero, .page-sec--dark, .cta-sec');
-        document.body.classList.toggle('cursor-on-dark', !!hero);
-      }
-    });
-
-    document.addEventListener('mousedown', function () {
-      document.body.classList.add('cursor-clicking');
-    });
-    document.addEventListener('mouseup', function () {
-      document.body.classList.remove('cursor-clicking');
-    });
-
-    // 링크·버튼 호버
-    const hoverSel = 'a, button, [role="button"], label, select, .btn, .nav-link, .float-main, .float-sub, .why-card, .intro-card, .case-prev-card';
-    document.addEventListener('mouseover', function (e) {
-      if (e.target.closest(hoverSel)) {
-        document.body.classList.add('cursor-hover');
-      }
-    });
-    document.addEventListener('mouseout', function (e) {
-      if (e.target.closest(hoverSel)) {
-        document.body.classList.remove('cursor-hover');
-      }
-    });
-
-    // 텍스트 입력 필드
-    document.addEventListener('mouseover', function (e) {
-      if (e.target.matches('input[type="text"], input[type="email"], input[type="tel"], textarea')) {
-        document.body.classList.add('cursor-text');
-      }
-    });
-    document.addEventListener('mouseout', function (e) {
-      if (e.target.matches('input[type="text"], input[type="email"], input[type="tel"], textarea')) {
-        document.body.classList.remove('cursor-text');
-      }
-    });
-
-    // 페이지 벗어날 때 커서 숨김
-    document.addEventListener('mouseleave', function () {
-      ring.style.opacity = '0';
-      dot.style.opacity  = '0';
-    });
-    document.addEventListener('mouseenter', function () {
-      ring.style.opacity = '1';
-      dot.style.opacity  = '1';
-    });
-  }
-
 })();

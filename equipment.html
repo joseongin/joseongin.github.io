@@ -6,10 +6,11 @@
 <meta http-equiv="Pragma" content="no-cache"/>
 <meta http-equiv="Expires" content="0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>첨단 장비 — 조성인 안경</title>
-<meta name="description" content="ZEISS i.Profiler, 사르망 트라이얼 렌즈, 정밀 피팅 시스템. 대전 조성인 안경이 보유한 전문 장비를 소개합니다."/>
+<title>첨단 장비 — 조성인안경원</title>
+<meta property="og:site_name" content="조성인안경원"/>
+<meta name="description" content="ZEISS i.Profiler, 사르망 트라이얼 렌즈, 정밀 피팅 시스템. 대전 조성인안경원이 보유한 전문 장비를 소개합니다."/>
 <link rel="icon" href="favicon.ico"/>
-<link rel="stylesheet" href="css/common.css?v=20260724c"/>
+<link rel="stylesheet" href="css/common.css?v=20261125"/>
 <style>
 
 /* ══════════════════════════════════════
@@ -28,7 +29,7 @@
   position: relative;
   border-radius: var(--rl);
   overflow: hidden;
-  box-shadow: 0 28px 72px rgba(11,31,58,.18), 0 0 0 1px rgba(184,147,100,.18);
+
 }
 .deep-img-wrap img {
   width: 100%; aspect-ratio: 4/3;
@@ -36,7 +37,7 @@
   background: #d8e4f0;
   transition: transform 1s cubic-bezier(0.76,0,0.24,1);
 }
-.deep-img-wrap:hover img { transform: scale(1.03); }
+
 .deep-img-wrap::before {
   content: '';
   position: absolute; top: -16px; left: -16px; right: 32px; bottom: 32px;
@@ -54,7 +55,7 @@
   position: absolute; z-index: 2;
   bottom: 20px; left: 20px;
   background: rgba(11,31,58,.82);
-  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+
   border: 1px solid rgba(184,147,100,.32);
   border-radius: 3px; padding: 8px 16px;
   color: var(--gold-l);
@@ -70,7 +71,7 @@
   content: ''; display: inline-block; width: 24px; height: 1.5px; background: var(--gold);
 }
 .deep-title {
-  font-size: clamp(1.5rem, 2.5vw, 1.9rem); font-weight: 800; color: var(--navy);
+  font-size: clamp(1.5rem, 2.5vw, 1.9rem); font-weight: 700; color: var(--navy);
   line-height: 1.35; word-break: keep-all; margin-bottom: 18px; letter-spacing: -.03em;
 }
 .deep-lead {
@@ -87,7 +88,7 @@
   width: 32px; height: 32px; border-radius: 50%;
   background: var(--navy); color: var(--gold-l);
   display: flex; align-items: center; justify-content: center;
-  font-size: .72rem; font-weight: 800; flex-shrink: 0; margin-top: 1px;
+  font-size: .72rem; font-weight: 700; flex-shrink: 0; margin-top: 1px;
 }
 .deep-list-text { font-size: .93rem; color: var(--sub); line-height: 1.75; word-break: keep-all; }
 .deep-list-text strong { color: var(--navy); font-weight: 700; }
@@ -112,7 +113,7 @@
 }
 .other-eq-item:hover { background: var(--off); }
 .other-eq-num {
-  font-size: .58rem; font-weight: 800; letter-spacing: .2em;
+  font-size: .58rem; font-weight: 700; letter-spacing: .2em;
   color: var(--gold); padding-top: 6px; flex-shrink: 0; min-width: 28px;
 }
 .other-eq-body { flex: 1; }
@@ -121,7 +122,7 @@
   color: var(--g400); text-transform: uppercase; margin-bottom: 8px;
 }
 .other-eq-title {
-  font-size: 1.05rem; font-weight: 800; color: var(--navy);
+  font-size: 1.05rem; font-weight: 700; color: var(--navy);
   margin-bottom: 10px; word-break: keep-all; letter-spacing: -.02em;
 }
 .other-eq-desc {
@@ -167,7 +168,7 @@
 .flow-step:nth-child(odd):hover { background: var(--navy-2); }
 
 .flow-step-num {
-  font-size: 3rem; font-weight: 900;
+  font-size: 3rem; font-weight: 700;
   color: rgba(10,28,51,.08); line-height: 1;
   margin-bottom: 12px; letter-spacing: -.06em;
 }
@@ -176,7 +177,7 @@
   color: var(--gold); text-transform: uppercase; margin-bottom: 10px;
 }
 .flow-step-title {
-  font-size: 1.08rem; font-weight: 800; color: var(--navy);
+  font-size: 1.08rem; font-weight: 700; color: var(--navy);
   margin-bottom: 10px; word-break: keep-all; letter-spacing: -.02em;
 }
 .flow-step-desc {
@@ -204,7 +205,7 @@
   transition: border-color .3s, box-shadow .3s, transform .35s;
   background: #fff;
 }
-.diff-card:hover { border-color: rgba(184,146,74,.4); box-shadow: var(--sh-m); transform: translateY(-4px); }
+.diff-card:hover { border-color: rgba(184,146,74,.4); }
 .diff-icon {
   width: 56px; height: 56px; margin: 0 auto 20px;
   background: var(--g50); border: 1px solid var(--bdr);
@@ -214,7 +215,7 @@
 .diff-card:hover .diff-icon { background: var(--navy); }
 .diff-card:hover .diff-icon svg { stroke: var(--gold-l); }
 .diff-icon svg { transition: stroke .3s; }
-.diff-title { font-size: 1.0rem; font-weight: 800; color: var(--navy); margin-bottom: 10px; word-break: keep-all; }
+.diff-title { font-size: 1.0rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; word-break: keep-all; }
 .diff-desc { font-size: .88rem; color: var(--sub); line-height: 1.8; word-break: keep-all; }
 
 /* ══════════════════════════════════════
@@ -259,7 +260,7 @@
     <h1 class="page-hero-title">첨단 장비</h1>
     <p class="page-hero-sub">
       정확한 처방은 정밀한 장비에서 시작됩니다.<br>
-      조성인 안경은 전문 임상기관 수준의 검사 장비를 도입하여<br>
+      조성인안경원은 전문 임상기관 수준의 검사 장비를 도입하여<br>
       오차 없는 데이터를 바탕으로 안경을 처방하고 제작합니다.
     </p>
   </div>
@@ -341,7 +342,7 @@
         <h2 class="deep-title">CHARMANT 사르망<br>트라이얼 렌즈 시스템</h2>
         <p class="deep-lead">
           누진다초점 렌즈 부적응의 가장 큰 원인은 처방 오차입니다.
-          조성인 안경은 렌즈 제작 전에 반드시 사르망 트라이얼 렌즈로
+          조성인안경원은 렌즈 제작 전에 반드시 사르망 트라이얼 렌즈로
           실제 착용 상태를 시뮬레이션해 부적응 위험을 선제적으로 차단합니다.
         </p>
         <ul class="deep-list">
@@ -617,7 +618,7 @@
   </div>
 </section>
 
-<script src="js/components.js"></script>
-<script src="js/common.js"></script>
+<script src="js/components.js?v=20261125"></script>
+<script src="js/common.js?v=20261125"></script>
 </body>
 </html>

@@ -6,10 +6,11 @@
 <meta http-equiv="Pragma" content="no-cache"/>
 <meta http-equiv="Expires" content="0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Case Studies — 조성인 안경</title>
-<meta name="description" content="누진다초점, 고도수, 어린이 근시, 프리즘 교정 등 조성인 안경의 실제 제작·처방 사례를 소개합니다."/>
+<title>Case Studies — 조성인안경원</title>
+<meta property="og:site_name" content="조성인안경원"/>
+<meta name="description" content="누진다초점, 고도수, 어린이 근시, 프리즘 교정 등 조성인안경원의 실제 제작·처방 사례를 소개합니다."/>
 <link rel="icon" href="favicon.ico"/>
-<link rel="stylesheet" href="css/common.css?v=20260724b"/>
+<link rel="stylesheet" href="css/common.css?v=20261125"/>
 <style>
 /* ══════════════════════════════════════
    CASE STUDIES — 타이포그래피 중심 고급 레이아웃
@@ -25,18 +26,18 @@
   display: grid; grid-template-columns: repeat(3,1fr);
 }
 .cs-stat {
-  padding: 40px 32px;
-  border-right: 1px solid rgba(255,255,255,.08);
+  padding: 32px 20px;
+  border-right: 1px solid rgba(255,255,255,.15);
   text-align: center;
 }
 .cs-stat:last-child { border-right: none; }
 .cs-stat-n {
-  font-size: clamp(2rem,3.5vw,2.8rem); font-weight: 900;
+  font-size: clamp(1.8rem,3vw,2.5rem); font-weight: 650;
   color: #fff; line-height: 1; letter-spacing: -.05em;
   margin-bottom: 8px;
 }
 .cs-stat-n sup { font-size: .9rem; color: var(--gold-l); vertical-align: super; }
-.cs-stat-l { font-size: .78rem; color: rgba(255,255,255,.45); letter-spacing: .04em; line-height: 1.6; }
+.cs-stat-l { font-size: .82rem; color: rgba(255,255,255,.75); line-height: 1.65; }
 
 /* ── 케이스 목록 영역 ── */
 .cs-list {
@@ -64,14 +65,13 @@
   gap: 12px;
 }
 .cs-num {
-  font-size: .62rem; font-weight: 800;
+  font-size: .62rem; font-weight: 700;
   color: var(--gold); letter-spacing: .22em;
   text-transform: uppercase; writing-mode: horizontal-tb;
 }
 .cs-num-line {
   width: 1px; flex: 1; min-height: 40px;
-  background: linear-gradient(to bottom, var(--gold) 0%, transparent 100%);
-  opacity: .3;
+  background: var(--bdr);
   align-self: stretch;
 }
 
@@ -82,7 +82,7 @@
   display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
 }
 .cs-category {
-  font-size: .68rem; font-weight: 800; letter-spacing: .18em;
+  font-size: .68rem; font-weight: 700; letter-spacing: .18em;
   color: var(--g400); text-transform: uppercase;
 }
 .cs-cat-dot {
@@ -92,7 +92,7 @@
 
 .cs-title {
   font-size: clamp(1.2rem, 2vw, 1.6rem);
-  font-weight: 800; color: var(--navy);
+  font-weight: 700; color: var(--navy);
   line-height: 1.38; word-break: keep-all;
   letter-spacing: -.03em; margin: 0;
 }
@@ -103,10 +103,10 @@
   background: var(--off);
   border-left: 3px solid var(--gold);
   padding: 16px 20px;
-  border-radius: 0 8px 8px 0;
+  border-radius: 0 var(--r) var(--r) 0;
 }
 .cs-insight-icon {
-  font-size: .72rem; font-weight: 800; letter-spacing: .1em;
+  font-size: .72rem; font-weight: 700; letter-spacing: .1em;
   color: var(--gold); text-transform: uppercase;
   flex-shrink: 0; padding-top: 2px;
 }
@@ -126,7 +126,7 @@
   display: inline-flex; align-items: center; gap: 5px;
   padding: 5px 14px;
   background: #fff; border: 1px solid var(--bdr);
-  border-radius: 20px; font-size: .73rem;
+  border-radius: var(--r); font-size: .75rem;
   color: var(--navy); font-weight: 600;
 }
 .cs-tag::before {
@@ -154,7 +154,7 @@
   background: #fff; padding: 18px 20px; text-align: center;
 }
 .cs-result-val {
-  font-size: 1.3rem; font-weight: 900;
+  font-size: 1.3rem; font-weight: 700;
   color: var(--navy); letter-spacing: -.04em; line-height: 1;
   margin-bottom: 5px;
 }
@@ -171,7 +171,7 @@
   gap: 32px; flex-wrap: wrap;
 }
 .blog-cta-text h3 {
-  font-size: 1.5rem; font-weight: 800; color: #fff;
+  font-size: 1.5rem; font-weight: 700; color: #fff;
   margin-bottom: 8px; word-break: keep-all; letter-spacing: -.03em;
 }
 .blog-cta-text p { font-size: .97rem; color: rgba(255,255,255,.55); line-height: 1.8; }
@@ -464,7 +464,7 @@
   </div>
 </section>
 
-<script src="js/components.js"></script>
-<script src="js/common.js"></script>
+<script src="js/components.js?v=20261125"></script>
+<script src="js/common.js?v=20261125"></script>
 </body>
 </html>

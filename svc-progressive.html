@@ -6,20 +6,17 @@
 <meta http-equiv="Pragma" content="no-cache"/>
 <meta http-equiv="Expires" content="0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>누진다초점 안경 — 조성인 안경</title>
+<title>누진다초점 안경 — 조성인안경원</title>
+<meta property="og:site_name" content="조성인안경원"/>
 <meta name="description" content="부적응률을 최소화하는 누진다초점 처방. 트라이얼 체험·3D 피팅·개인 맞춤 설계로 어지러움 없는 누진안경을 제공합니다."/>
 <link rel="icon" href="favicon.ico"/>
-<link rel="stylesheet" href="css/common.css?v=20260724b"/>
+<link rel="stylesheet" href="css/common.css?v=20261125"/>
 <style>
 /* ── Hero ── */
 .svc-hero {
-  padding: calc(var(--nav-h) + 80px) 0 80px;
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-3) 100%);
+  padding: clamp(46px, 6vw, 80px) 0;
+  background: var(--navy);
   position: relative; overflow: hidden;
-}
-.svc-hero::before {
-  content: ''; position: absolute; inset: 0;
-  background: radial-gradient(ellipse at 70% 45%, rgba(184,147,100,.12) 0%, transparent 60%);
 }
 .svc-hero-inner {
   max-width: var(--max-w); margin: 0 auto; padding: 0 var(--px);
@@ -27,15 +24,15 @@
   display: grid; grid-template-columns: 1fr 380px; gap: 64px; align-items: center;
 }
 .svc-hero-eyebrow {
-  font-size: .72rem; font-weight: 700; letter-spacing: .2em;
+  font-size: .72rem; font-weight: 700; letter-spacing: .09em;
   color: var(--gold-l); text-transform: uppercase; margin-bottom: 18px;
 }
 .svc-hero-title {
   font-size: clamp(2rem, 4vw, 3.2rem);
-  font-weight: 900; color: #fff; line-height: 1.2;
+  font-weight: 650; color: #fff; line-height: 1.2;
   letter-spacing: -.04em; margin-bottom: 22px; word-break: keep-all;
 }
-.svc-hero-title em { font-style: normal; color: var(--gold-l); }
+.svc-hero-title em { font-style: normal; color: #eee5d8; }
 .svc-hero-desc {
   font-size: 1.05rem; color: rgba(255,255,255,.72);
   line-height: 1.9; word-break: keep-all; margin-bottom: 36px;
@@ -45,7 +42,7 @@
   border-radius: var(--rl); padding: 28px;
 }
 .hero-stat-title { font-size: .72rem; font-weight: 700; color: var(--gold-l); letter-spacing: .12em; margin-bottom: 16px; text-transform: uppercase; }
-.hero-stat-num { font-size: 3.2rem; font-weight: 900; color: #fff; letter-spacing: -.06em; line-height: 1; margin-bottom: 8px; }
+.hero-stat-num { font-size: 3.2rem; font-weight: 700; color: #fff; letter-spacing: -.06em; line-height: 1; margin-bottom: 8px; }
 .hero-stat-sub { font-size: .88rem; color: rgba(255,255,255,.55); line-height: 1.55; word-break: keep-all; }
 .hero-stat-divider { height: 1px; background: rgba(255,255,255,.1); margin: 20px 0; }
 
@@ -68,13 +65,13 @@
 }
 .intro-visual {
   border-radius: var(--rl); overflow: hidden;
-  background: var(--g50); aspect-ratio: 5/4; box-shadow: var(--sh-m);
+  background: var(--g50); aspect-ratio: 5/4;
   display: flex; align-items: center; justify-content: center;
 }
 .intro-visual img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
 .intro-visual svg { width: 110px; height: 110px; opacity: .1; }
 .intro-label { font-size: .7rem; font-weight: 700; letter-spacing: .12em; color: var(--gold); text-transform: uppercase; margin-bottom: 14px; }
-.intro-title { font-size: 1.9rem; font-weight: 900; color: var(--navy); line-height: 1.3; word-break: keep-all; margin-bottom: 18px; letter-spacing: -.04em; }
+.intro-title { font-size: 1.9rem; font-weight: 700; color: var(--navy); line-height: 1.3; word-break: keep-all; margin-bottom: 18px; letter-spacing: -.04em; }
 .intro-lead {
   font-size: 1rem; color: var(--sub); line-height: 1.9; word-break: keep-all;
   border-left: 3px solid var(--gold); padding-left: 18px; margin-bottom: 28px;
@@ -86,12 +83,12 @@
 }
 .method-card {
   background: #fff; border-radius: var(--rl); padding: 36px 30px;
-  box-shadow: var(--sh-s); border-top: 3px solid var(--navy);
+  border-top: 3px solid var(--navy);
   transition: border-top-color .25s, box-shadow .25s, transform .25s;
 }
-.method-card:hover { border-top-color: var(--gold); box-shadow: var(--sh-m); transform: translateY(-4px); }
+.method-card:hover { border-top-color: var(--gold); }
 .method-num { font-size: .72rem; font-weight: 700; color: var(--gold); letter-spacing: .1em; margin-bottom: 14px; }
-.method-title { font-size: 1.1rem; font-weight: 800; color: var(--navy); margin-bottom: 10px; word-break: keep-all; }
+.method-title { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; word-break: keep-all; }
 .method-desc { font-size: .9rem; color: var(--sub); line-height: 1.85; word-break: keep-all; }
 .method-icon { width: 44px; height: 44px; background: var(--g50); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
 .method-icon svg { width: 22px; height: 22px; stroke: var(--navy); fill: none; stroke-width: 1.8; }
@@ -104,9 +101,9 @@
   border: 2px solid var(--bdr); border-radius: var(--rl); padding: 32px 26px;
   transition: border-color .25s, box-shadow .25s;
 }
-.lens-card:hover { border-color: var(--gold); box-shadow: var(--sh-s); }
+.lens-card:hover { border-color: var(--gold); }
 .lens-label { font-size: .7rem; font-weight: 700; color: var(--gold); letter-spacing: .1em; margin-bottom: 10px; }
-.lens-name { font-size: 1.05rem; font-weight: 800; color: var(--navy); margin-bottom: 10px; word-break: keep-all; }
+.lens-name { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; word-break: keep-all; }
 .lens-desc { font-size: .88rem; color: var(--sub); line-height: 1.8; word-break: keep-all; margin-bottom: 16px; }
 .lens-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .lens-tag {
@@ -116,7 +113,7 @@
 
 /* ── Who ── */
 .who-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-.who-card { background: #fff; border-radius: var(--r); padding: 24px 22px; box-shadow: var(--sh-s); border-left: 3px solid var(--gold); }
+.who-card { background: #fff; border-radius: var(--r); padding: 24px 22px; border-left: 3px solid var(--gold); }
 .who-card strong { display: block; color: var(--navy); margin-bottom: 6px; font-size: .95rem; word-break: keep-all; }
 .who-card p { font-size: .88rem; color: var(--sub); line-height: 1.75; word-break: keep-all; }
 
@@ -165,7 +162,7 @@
 <div id="ticker-slot"></div>
 
 <!-- ── Breadcrumb ── -->
-<nav class="breadcrumb" style="margin-top:var(--nav-h);">
+<nav class="breadcrumb">
   <div class="breadcrumb-inner">
     <a href="index.html">Home</a>
     <span class="breadcrumb-sep">›</span>
@@ -183,7 +180,7 @@
       <h1 class="svc-hero-title">누진다초점 안경<br><em>부적응 없는 누진 처방</em></h1>
       <p class="svc-hero-desc">
         누진다초점 부적응률은 평균 15~20%로 알려져 있습니다.<br>
-        조성인 안경은 6,000건 이상의 누진 처방 임상 경험을 바탕으로<br>
+        조성인안경원은 6,000건 이상의 누진 처방 임상 경험을 바탕으로<br>
         트라이얼 체험·3D 피팅·개인 맞춤 설계로 이 수치를 최소화합니다.
       </p>
     </div>
@@ -215,7 +212,7 @@
           이 세 가지가 틀어지면 어지러움·흔들림이 발생합니다.
         </p>
         <p style="font-size:.9rem; color:var(--sub); line-height:1.85; word-break:keep-all;">
-          조성인 안경은 <strong style="color:var(--navy);">트라이얼 체험으로 가입도를 직접 결정</strong>하고,
+          조성인안경원은 <strong style="color:var(--navy);">트라이얼 체험으로 가입도를 직접 결정</strong>하고,
           <strong style="color:var(--navy);">3D 피팅 파라미터를 정밀 측정</strong>하며,
           <strong style="color:var(--navy);">생활 패턴별 렌즈 설계를 맞춤 선택</strong>합니다.
           착용 후에는 재방문 피팅으로 최종 적응을 완성합니다.
@@ -368,12 +365,12 @@
     <h2 class="s-title s-title--lt">누진렌즈, 이번엔 편하게</h2>
     <p class="s-sub s-sub--lt" style="margin-bottom:40px;">
       6,000건 이상의 임상 경험과 3단계 부적응 예방 프로토콜.<br>
-      조성인 안경에서 누진다초점을 처음으로 성공시켜 보세요.
+      조성인안경원에서 누진다초점을 처음으로 성공시켜 보세요.
     </p>
   </div>
 </section>
 
-<script src="js/components.js"></script>
-<script src="js/common.js"></script>
+<script src="js/components.js?v=20261125"></script>
+<script src="js/common.js?v=20261125"></script>
 </body>
 </html>

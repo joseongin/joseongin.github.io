@@ -6,10 +6,11 @@
 <meta http-equiv="Pragma" content="no-cache"/>
 <meta http-equiv="Expires" content="0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Contact — 조성인 안경</title>
-<meta name="description" content="대전 서구 둔산북로 22 153·154호. 조성인 안경 위치, 영업시간, 주차, 예약 안내."/>
+<title>Contact — 조성인안경원</title>
+<meta property="og:site_name" content="조성인안경원"/>
+<meta name="description" content="대전 서구 둔산북로 22 153·154호. 조성인안경원 위치, 영업시간, 주차, 예약 안내."/>
 <link rel="icon" href="favicon.ico"/>
-<link rel="stylesheet" href="css/common.css?v=20260724b"/>
+<link rel="stylesheet" href="css/common.css?v=20261125"/>
 <style>
 /* ── 지도 + 정보 ── */
 .contact-grid {
@@ -21,7 +22,7 @@
 .map-wrap {
   border-radius: var(--rl);
   overflow: hidden;
-  box-shadow: var(--sh-m);
+
   border: 1px solid var(--bdr);
   height: 540px;
   background: var(--g50);
@@ -35,56 +36,56 @@
   position: absolute; left: 16px; bottom: 16px; z-index: 5;
   display: inline-flex; align-items: center; gap: 8px;
   background: #fff; color: var(--navy);
-  font-size: .84rem; font-weight: 800;
-  padding: 11px 18px; border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(11,31,58,.22);
+  font-size: .84rem; font-weight: 650;
+  padding: 10px 14px; border: 1px solid var(--bdr); border-radius: var(--r);
   text-decoration: none;
-  transition: transform .2s, box-shadow .2s;
+  transition: var(--tr);
 }
-.map-overlay-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(11,31,58,.3); }
+.map-overlay-btn:hover { background: var(--off); }
 .map-overlay-mark {
   display: inline-flex; align-items: center; justify-content: center;
-  width: 22px; height: 22px; border-radius: 6px;
-  background: #03c75a; color: #fff; font-weight: 900; font-size: .8rem;
+  width: 22px; height: 22px; border-radius: var(--r);
+  color: var(--booking); font-weight: 750; font-size: .8rem;
 }
 
 /* ── 정보 패널 ── */
 .info-card {
-  background: var(--navy);
+  background: var(--off);
+  border: 1px solid var(--bdr);
   border-radius: var(--rl);
   overflow: hidden;
 }
 .info-card-head {
   padding: 32px 36px 28px;
-  border-bottom: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid var(--bdr);
 }
 .info-card-head h2 {
-  font-size: 1.25rem; font-weight: 900; color: #fff;
+  font-size: 1.42rem; font-weight: 700; color: var(--navy);
   letter-spacing: -.025em; margin-bottom: 4px;
 }
-.info-card-head p { font-size: .8rem; color: rgba(255,255,255,.45); letter-spacing: .06em; }
+.info-card-head p { font-size: .86rem; color: var(--sub); }
 .info-rows { padding: 8px 36px 8px; }
 .info-row {
   display: flex; align-items: flex-start; gap: 14px;
   padding: 18px 0;
-  border-bottom: 1px solid rgba(255,255,255,.06);
+  border-bottom: 1px solid var(--bdr);
 }
 .info-row:last-child { border-bottom: none; }
 .info-row-icon {
-  width: 36px; height: 36px; border-radius: 8px;
-  background: rgba(255,255,255,.07);
+  width: 32px; height: 32px; border-radius: var(--r);
+  background: var(--g100);
   display: flex; align-items: center; justify-content: center;
-  font-size: .85rem; color: var(--gold-l); flex-shrink: 0; font-weight: 700;
+  font-size: .85rem; color: var(--navy); flex-shrink: 0; font-weight: 650;
 }
 .info-row-label {
-  font-size: .65rem; font-weight: 700; letter-spacing: .12em;
-  color: var(--gold-l); text-transform: uppercase; margin-bottom: 5px;
+  font-size: .72rem; font-weight: 650; letter-spacing: .08em;
+  color: var(--gold-d); text-transform: uppercase; margin-bottom: 4px;
 }
 .info-row-value {
-  font-size: .92rem; color: rgba(255,255,255,.88);
+  font-size: .96rem; color: var(--navy);
   font-weight: 600; line-height: 1.65; word-break: keep-all;
 }
-.info-row-sub { font-size: .78rem; color: rgba(255,255,255,.4); margin-top: 3px; }
+.info-row-sub { font-size: .82rem; color: var(--sub); margin-top: 3px; }
 
 .info-btns {
   padding: 20px 36px 32px;
@@ -98,26 +99,20 @@
   background: #fff;
   border: 1px solid var(--bdr);
   border-radius: var(--rl);
-  box-shadow: var(--sh-s);
+
   padding: clamp(36px, 5vw, 56px);
   text-align: center;
   position: relative; overflow: hidden;
 }
-.reserve-panel::before {
-  content: '';
-  position: absolute; top: 0; left: 0; right: 0; height: 4px;
-  background: #03c75a;
-}
 .reserve-naver-badge {
   display: inline-flex; align-items: center; justify-content: center;
-  width: 60px; height: 60px; border-radius: 16px;
-  background: #03c75a; color: #fff;
-  font-size: 1.7rem; font-weight: 900; line-height: 1;
-  margin: 0 auto 22px;
-  box-shadow: 0 10px 24px rgba(3,199,90,.28);
+  width: 44px; height: 44px; border-radius: var(--r);
+  background: #edf3ed; color: var(--booking);
+  font-size: 1.35rem; font-weight: 750; line-height: 1;
+  margin: 0 auto 16px;
 }
 .reserve-panel h3 {
-  font-size: clamp(1.3rem, 2.4vw, 1.7rem); font-weight: 900;
+  font-size: clamp(1.3rem, 2.4vw, 1.7rem); font-weight: 650;
   color: var(--navy); letter-spacing: -.025em; margin-bottom: 14px;
   word-break: keep-all;
 }
@@ -128,15 +123,14 @@
 }
 .btn-naver {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-  background: #03c75a; color: #fff !important;
-  font-size: 1.02rem; font-weight: 800;
-  padding: 16px 40px; border-radius: 12px;
+  background: var(--booking); color: #fff;
+  font-size: .95rem; font-weight: 650;
+  padding: 13px 28px; border-radius: var(--r);
   text-decoration: none; border: none;
-  transition: transform .2s, box-shadow .2s, background .2s;
-  box-shadow: 0 8px 20px rgba(3,199,90,.3);
+  transition: var(--tr);
 }
-.btn-naver:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(3,199,90,.4); background: #02b350; }
-.btn-naver .n-mark { font-weight: 900; font-size: 1.15rem; }
+.btn-naver:hover { background: #114c36; }
+.btn-naver .n-mark { font-weight: 700; font-size: 1.15rem; }
 .reserve-note {
   margin-top: 22px; font-size: .82rem; color: var(--g400);
   letter-spacing: .01em;
@@ -152,11 +146,11 @@
   border: 1px solid var(--bdr);
   border-radius: var(--rl);
   padding: 30px 30px 28px;
-  box-shadow: var(--sh-s);
+
   display: flex; flex-direction: column; gap: 14px;
   transition: transform .3s var(--ease-out-expo,ease), box-shadow .3s, border-color .3s;
 }
-.review-card:hover { transform: translateY(-6px); box-shadow: var(--sh-m); border-color: rgba(184,146,74,.3); }
+.review-card:hover { border-color: rgba(184,146,74,.3); }
 .review-stars { color: #ffb400; font-size: 1rem; letter-spacing: 2px; line-height: 1; }
 .review-body {
   font-size: .93rem; color: var(--text); line-height: 1.9;
@@ -170,24 +164,24 @@
   width: 38px; height: 38px; border-radius: 50%;
   background: var(--navy); color: var(--gold-l);
   display: flex; align-items: center; justify-content: center;
-  font-size: .9rem; font-weight: 800; flex-shrink: 0;
+  font-size: .9rem; font-weight: 700; flex-shrink: 0;
 }
 .review-author { font-size: .84rem; font-weight: 700; color: var(--navy); line-height: 1.3; }
 .review-tag { font-size: .72rem; color: var(--g400); }
 .reviews-cta { text-align: center; margin-top: 40px; }
 .reviews-cta .btn-naver-outline {
   display: inline-flex; align-items: center; gap: 8px;
-  border: 1.5px solid #03c75a; color: #03c75a;
+  border: 1px solid var(--booking); color: var(--booking);
   background: #fff;
-  font-size: .92rem; font-weight: 800;
+  font-size: .92rem; font-weight: 700;
   padding: 13px 30px; border-radius: 10px;
   text-decoration: none;
   transition: background .2s, color .2s;
 }
-.reviews-cta .btn-naver-outline:hover { background: #03c75a; color: #fff; }
+.reviews-cta .btn-naver-outline:hover { background: var(--booking); color: #fff; }
 
 /* ── Hours Table ── */
-.hours-table { width: 100%; border-collapse: collapse; border-radius: var(--rl); overflow: hidden; box-shadow: var(--sh-s); }
+.hours-table { width: 100%; border-collapse: collapse; border-radius: var(--rl); overflow: hidden; }
 .hours-table th {
   background: var(--navy); color: #fff;
   padding: 15px 24px; text-align: left;
@@ -199,15 +193,18 @@
 .hours-closed { color: #e53e3e; font-weight: 700; }
 
 /* ── FAQ ── */
+.hours-faq-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px; align-items: start; }
 .faq-list { display: flex; flex-direction: column; gap: 8px; }
 .faq-item { background: #fff; border: 1px solid var(--bdr); border-radius: var(--r); overflow: hidden; }
 .faq-q {
+  width: 100%; text-align: left;
   padding: 20px 26px;
   font-size: 1rem; font-weight: 700; color: var(--navy);
   cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px;
   word-break: keep-all; transition: background .18s;
 }
 .faq-q:hover { background: var(--off); }
+.faq-q:focus-visible { outline-offset: -4px; }
 .faq-toggle { font-size: .7rem; color: var(--g400); transition: transform .25s; flex-shrink: 0; }
 .faq-item.open .faq-toggle { transform: rotate(180deg); color: var(--navy); }
 .faq-a {
@@ -218,6 +215,10 @@
 }
 .faq-item.open .faq-a { max-height: 400px; padding: 0 26px 22px; }
 
+@media (prefers-reduced-motion: reduce) {
+  .faq-toggle, .faq-a { transition: none; }
+}
+
 /* ── Responsive ── */
 @media (max-width: 1060px) {
   .contact-grid { grid-template-columns: 1fr; }
@@ -226,6 +227,7 @@
 }
 @media (max-width: 720px) {
   .reviews-grid { grid-template-columns: 1fr; }
+  .hours-faq-grid { grid-template-columns: 1fr; gap: 36px; }
 }
 @media (max-width: 600px) {
   .map-wrap { height: 360px; }
@@ -259,7 +261,7 @@
       <div class="map-wrap rv">
         <iframe
           src="https://www.openstreetmap.org/export/embed.html?bbox=127.3705750%2C36.3505937%2C127.3835750%2C36.3605937&amp;layer=mapnik&amp;marker=36.3555937%2C127.3770750"
-          title="조성인 안경 위치 지도"
+          title="조성인안경원 위치 지도"
           loading="lazy"
           allowfullscreen>
         </iframe>
@@ -272,8 +274,8 @@
       <div class="rv d1">
         <div class="info-card">
           <div class="info-card-head">
-            <h2>조성인 안경</h2>
-            <p>JOSEONGIN OPTICAL · DAEJEON</p>
+            <h2>조성인안경원</h2>
+            <p>대전 둔산동</p>
           </div>
           <div class="info-rows">
             <div class="info-row">
@@ -312,9 +314,9 @@
           </div>
           <div class="info-btns">
             <a href="https://m.booking.naver.com/booking/13/bizes/819206/items/4948017?area=bmp&lang=ko&service-target=map-pc&startDate=2026-05-18&theme=place"
-               target="_blank" class="btn btn-gold">예약하기</a>
+               target="_blank" class="btn btn-navy">예약하기</a>
             <a href="http://map.naver.com/p/entry/place/1694854628" target="_blank"
-               class="btn btn-outline-lt" style="border-color:rgba(255,255,255,.3);">지도 열기</a>
+               class="btn btn-outline">지도 열기</a>
           </div>
         </div>
       </div>
@@ -403,7 +405,7 @@
 <!-- ── 영업시간 + FAQ ── -->
 <section class="page-sec">
   <div class="wrap">
-    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items:start;">
+    <div class="hours-faq-grid">
       <!-- 영업시간 -->
       <div class="rv">
         <div class="s-label" style="margin-bottom:20px;">Business Hours</div>
@@ -419,39 +421,39 @@
         <h2 class="s-title" style="font-size:1.6rem; margin-bottom:28px;">자주 묻는 질문</h2>
         <div class="faq-list">
           <div class="faq-item">
-            <div class="faq-q" onclick="toggleFaq(this)">
+            <button type="button" class="faq-q" aria-expanded="false" aria-controls="contact-faq-1" onclick="toggleFaq(this)">
               예약 없이 방문해도 되나요?
               <span class="faq-toggle">&#9660;</span>
-            </div>
-            <div class="faq-a">방문은 가능하지만, 정밀 검안에는 충분한 시간이 필요합니다. 누진다초점·고도수 처방이 필요하신 경우에는 예약 후 방문하시면 대기 없이 충분한 시간을 배정받으실 수 있습니다.</div>
+            </button>
+            <div class="faq-a" id="contact-faq-1" aria-hidden="true">방문은 가능하지만, 정밀 검안에는 충분한 시간이 필요합니다. 누진다초점·고도수 처방이 필요하신 경우에는 예약 후 방문하시면 대기 없이 충분한 시간을 배정받으실 수 있습니다.</div>
           </div>
           <div class="faq-item">
-            <div class="faq-q" onclick="toggleFaq(this)">
+            <button type="button" class="faq-q" aria-expanded="false" aria-controls="contact-faq-2" onclick="toggleFaq(this)">
               검안 시간은 얼마나 걸리나요?
               <span class="faq-toggle">&#9660;</span>
-            </div>
-            <div class="faq-a">일반 도수 확인은 30~40분, 정밀 검안(ZEISS 웨이브프론트 + 양안시 기능 검사)은 약 60~90분이 소요됩니다. 누진다초점 첫 처방은 트라이얼 체험 포함 최대 2시간 정도 걸릴 수 있습니다.</div>
+            </button>
+            <div class="faq-a" id="contact-faq-2" aria-hidden="true">일반 도수 확인은 30~40분, 정밀 검안(ZEISS 웨이브프론트 + 양안시 기능 검사)은 약 60~90분이 소요됩니다. 누진다초점 첫 처방은 트라이얼 체험 포함 최대 2시간 정도 걸릴 수 있습니다.</div>
           </div>
           <div class="faq-item">
-            <div class="faq-q" onclick="toggleFaq(this)">
+            <button type="button" class="faq-q" aria-expanded="false" aria-controls="contact-faq-3" onclick="toggleFaq(this)">
               안경 제작 기간은 어떻게 되나요?
               <span class="faq-toggle">&#9660;</span>
-            </div>
-            <div class="faq-a">일반 단초점 안경은 당일~2일, ZEISS 개인 맞춤 설계 렌즈는 5~7 영업일, 고도수·특수 렌즈는 1~2주가 소요될 수 있습니다. 접수 시 정확한 일정을 안내해 드립니다.</div>
+            </button>
+            <div class="faq-a" id="contact-faq-3" aria-hidden="true">일반 단초점 안경은 당일~2일, ZEISS 개인 맞춤 설계 렌즈는 5~7 영업일, 고도수·특수 렌즈는 1~2주가 소요될 수 있습니다. 접수 시 정확한 일정을 안내해 드립니다.</div>
           </div>
           <div class="faq-item">
-            <div class="faq-q" onclick="toggleFaq(this)">
+            <button type="button" class="faq-q" aria-expanded="false" aria-controls="contact-faq-4" onclick="toggleFaq(this)">
               다른 안경원에서 만든 안경 피팅도 가능한가요?
               <span class="faq-toggle">&#9660;</span>
-            </div>
-            <div class="faq-a">네, 가능합니다. 코받침 조정, 다리 조정, 광학중심 확인 등 피팅 서비스를 제공합니다. 누진안경 부적응으로 불편하신 경우에도 상담 후 원인 파악을 도와드립니다.</div>
+            </button>
+            <div class="faq-a" id="contact-faq-4" aria-hidden="true">네, 가능합니다. 코받침 조정, 다리 조정, 광학중심 확인 등 피팅 서비스를 제공합니다. 누진안경 부적응으로 불편하신 경우에도 상담 후 원인 파악을 도와드립니다.</div>
           </div>
           <div class="faq-item">
-            <div class="faq-q" onclick="toggleFaq(this)">
+            <button type="button" class="faq-q" aria-expanded="false" aria-controls="contact-faq-5" onclick="toggleFaq(this)">
               어린이 시력 검사도 가능한가요?
               <span class="faq-toggle">&#9660;</span>
-            </div>
-            <div class="faq-a">만 5세 이상 어린이의 시력검사와 근시 억제 처방을 전문으로 합니다. 협조가 어려운 경우에도 전문적인 검사 기법으로 신뢰도 높은 처방을 제공합니다. 초진 어린이는 보호자와 함께 예약해 주세요.</div>
+            </button>
+            <div class="faq-a" id="contact-faq-5" aria-hidden="true">만 5세 이상 어린이의 시력검사와 근시 억제 처방을 전문으로 합니다. 협조가 어려운 경우에도 전문적인 검사 기법으로 신뢰도 높은 처방을 제공합니다. 초진 어린이는 보호자와 함께 예약해 주세요.</div>
           </div>
         </div>
       </div>
@@ -478,14 +480,17 @@
 </section>
 
 <script>
-function toggleFaq(el) {
-  const item = el.closest('.faq-item');
-  const isOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-  if (!isOpen) item.classList.add('open');
+function toggleFaq(selected) {
+  const willOpen = selected.getAttribute('aria-expanded') === 'false';
+  document.querySelectorAll('.faq-q').forEach(question => {
+    const open = question === selected && willOpen;
+    question.setAttribute('aria-expanded', String(open));
+    question.closest('.faq-item').classList.toggle('open', open);
+    document.getElementById(question.getAttribute('aria-controls')).setAttribute('aria-hidden', String(!open));
+  });
 }
 </script>
-<script src="js/components.js"></script>
-<script src="js/common.js"></script>
+<script src="js/components.js?v=20261125"></script>
+<script src="js/common.js?v=20261125"></script>
 </body>
 </html>

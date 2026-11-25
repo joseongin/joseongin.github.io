@@ -6,20 +6,17 @@
 <meta http-equiv="Pragma" content="no-cache"/>
 <meta http-equiv="Expires" content="0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>정밀검안 — 조성인 안경</title>
-<meta name="description" content="단순 도수 측정이 아닌 시기능 종합 평가. ZEISS 웨이브프론트·양안시 기능·각막지형도를 포함한 조성인 안경의 정밀 검안을 소개합니다."/>
+<title>정밀검안 — 조성인안경원</title>
+<meta property="og:site_name" content="조성인안경원"/>
+<meta name="description" content="단순 도수 측정이 아닌 시기능 종합 평가. ZEISS 웨이브프론트·양안시 기능·각막지형도를 포함한 조성인안경원의 정밀 검안을 소개합니다."/>
 <link rel="icon" href="favicon.ico"/>
-<link rel="stylesheet" href="css/common.css?v=20260724b"/>
+<link rel="stylesheet" href="css/common.css?v=20261125"/>
 <style>
 /* ── Hero ── */
 .svc-hero {
-  padding: calc(var(--nav-h) + 80px) 0 80px;
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-3) 100%);
+  padding: clamp(46px, 6vw, 80px) 0;
+  background: var(--navy);
   position: relative; overflow: hidden;
-}
-.svc-hero::before {
-  content: ''; position: absolute; inset: 0;
-  background: radial-gradient(ellipse at 65% 50%, rgba(184,147,100,.13) 0%, transparent 60%);
 }
 .svc-hero-inner {
   max-width: var(--max-w); margin: 0 auto; padding: 0 var(--px);
@@ -27,16 +24,16 @@
   display: grid; grid-template-columns: 1fr 400px; gap: 64px; align-items: center;
 }
 .svc-hero-eyebrow {
-  font-size: .72rem; font-weight: 700; letter-spacing: .2em;
+  font-size: .72rem; font-weight: 700; letter-spacing: .09em;
   color: var(--gold-l); text-transform: uppercase; margin-bottom: 18px;
 }
 .svc-hero-title {
   font-size: clamp(2rem, 4vw, 3.2rem);
-  font-weight: 900; color: #fff;
+  font-weight: 650; color: #fff;
   line-height: 1.2; letter-spacing: -.04em;
   margin-bottom: 22px; word-break: keep-all;
 }
-.svc-hero-title em { font-style: normal; color: var(--gold-l); }
+.svc-hero-title em { font-style: normal; color: #eee5d8; }
 .svc-hero-desc {
   font-size: 1.05rem; color: rgba(255,255,255,.72);
   line-height: 1.9; word-break: keep-all; margin-bottom: 36px;
@@ -48,7 +45,7 @@
 }
 .stat-row { display: flex; align-items: center; gap: 18px; }
 .stat-num {
-  font-size: 2rem; font-weight: 900; color: var(--gold-l);
+  font-size: 2rem; font-weight: 700; color: var(--gold-l);
   letter-spacing: -.04em; min-width: 72px; line-height: 1;
 }
 .stat-text { font-size: .88rem; color: rgba(255,255,255,.65); line-height: 1.55; word-break: keep-all; }
@@ -72,7 +69,7 @@
 .check-grid {
   display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px;
   background: var(--g100); border-radius: var(--rl); overflow: hidden;
-  box-shadow: var(--sh-s);
+
 }
 .check-card {
   background: #fff; padding: 36px 32px;
@@ -80,11 +77,11 @@
 }
 .check-card:hover { background: var(--off); }
 .check-num {
-  font-size: 2.4rem; font-weight: 900; color: var(--navy);
+  font-size: 2.4rem; font-weight: 700; color: var(--navy);
   opacity: .1; line-height: 1; letter-spacing: -.06em; margin-bottom: 18px;
 }
 .check-title {
-  font-size: 1.1rem; font-weight: 800; color: var(--navy);
+  font-size: 1.1rem; font-weight: 700; color: var(--navy);
   margin-bottom: 10px; word-break: keep-all;
 }
 .check-en {
@@ -102,7 +99,7 @@
 .big-intro-visual {
   border-radius: var(--rl); overflow: hidden;
   background: var(--g50); aspect-ratio: 5/4;
-  box-shadow: var(--sh-m);
+
   display: flex; align-items: center; justify-content: center; position: relative;
 }
 .big-intro-visual svg { width: 110px; height: 110px; opacity: .08; }
@@ -112,7 +109,7 @@
   color: var(--gold); text-transform: uppercase; margin-bottom: 14px;
 }
 .big-intro-title {
-  font-size: 1.9rem; font-weight: 900; color: var(--navy);
+  font-size: 1.9rem; font-weight: 700; color: var(--navy);
   line-height: 1.3; word-break: keep-all; margin-bottom: 16px;
   letter-spacing: -.04em;
 }
@@ -135,7 +132,7 @@
   width: 34px; height: 34px; border-radius: 50%;
   background: var(--navy); color: var(--gold-l);
   display: flex; align-items: center; justify-content: center;
-  font-size: .75rem; font-weight: 800; flex-shrink: 0;
+  font-size: .75rem; font-weight: 700; flex-shrink: 0;
 }
 .point-body-title { font-size: .95rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; word-break: keep-all; }
 .point-body-desc { font-size: .88rem; color: var(--sub); line-height: 1.75; word-break: keep-all; }
@@ -146,7 +143,7 @@
 }
 .who-card {
   background: #fff; border-radius: var(--r); padding: 24px 22px;
-  box-shadow: var(--sh-s); border-left: 3px solid var(--gold);
+  border-left: 3px solid var(--gold);
 }
 .who-card strong { display: block; color: var(--navy); margin-bottom: 6px; font-size: .95rem; word-break: keep-all; }
 .who-card p { font-size: .88rem; color: var(--sub); line-height: 1.75; word-break: keep-all; }
@@ -196,7 +193,7 @@
 <div id="ticker-slot"></div>
 
 <!-- ── Breadcrumb ── -->
-<nav class="breadcrumb" style="margin-top:var(--nav-h);">
+<nav class="breadcrumb">
   <div class="breadcrumb-inner">
     <a href="index.html">Home</a>
     <span class="breadcrumb-sep">›</span>
@@ -242,7 +239,7 @@
   <div class="wrap">
     <div class="s-head rv">
       <p class="s-label">WHAT WE EXAMINE</p>
-      <h2 class="s-title">조성인 안경 정밀검안 항목</h2>
+      <h2 class="s-title">조성인안경원 정밀검안 항목</h2>
       <p class="s-sub">일반 자동굴절검사기 측정에서 나아가, 시각 불편의 근본 원인을 찾습니다.</p>
       <div class="s-divider"></div>
     </div>
@@ -301,7 +298,7 @@
         <h2 class="big-intro-title">일반 시력검사와<br>무엇이 다른가요</h2>
         <p class="big-intro-lead">
           일반 안경원의 검사는 대부분 자동굴절검사기 수치 + 시력표 확인으로 마무리됩니다.
-          조성인 안경의 정밀검안은 여기서 더 나아가 '왜 안 맞는가'를 데이터로 규명합니다.
+          조성인안경원의 정밀검안은 여기서 더 나아가 '왜 안 맞는가'를 데이터로 규명합니다.
         </p>
         <div class="points-list">
           <div class="point-item">
@@ -380,7 +377,7 @@
   </div>
 </section>
 
-<script src="js/components.js"></script>
-<script src="js/common.js"></script>
+<script src="js/components.js?v=20261125"></script>
+<script src="js/common.js?v=20261125"></script>
 </body>
 </html>

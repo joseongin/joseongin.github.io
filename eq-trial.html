@@ -6,21 +6,17 @@
 <meta http-equiv="Pragma" content="no-cache"/>
 <meta http-equiv="Expires" content="0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>근난시 통합 트라이얼 렌즈 — 조성인 안경</title>
-<meta name="description" content="근거리·난시·누진 처방을 제작 전에 실제로 체험합니다. 조성인 안경의 통합 트라이얼 렌즈 시스템으로 부적응 위험을 선제적으로 차단합니다."/>
+<title>근난시 통합 트라이얼 렌즈 — 조성인안경원</title>
+<meta property="og:site_name" content="조성인안경원"/>
+<meta name="description" content="근거리·난시·누진 처방을 제작 전에 실제로 체험합니다. 조성인안경원의 통합 트라이얼 렌즈 시스템으로 부적응 위험을 선제적으로 차단합니다."/>
 <link rel="icon" href="favicon.ico"/>
-<link rel="stylesheet" href="css/common.css?v=20260724b"/>
+<link rel="stylesheet" href="css/common.css?v=20261125"/>
 <style>
 /* ── Hero ── */
 .eq-hero {
-  padding: calc(var(--nav-h) + 80px) 0 80px;
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-3) 100%);
+  padding: clamp(46px, 6vw, 80px) 0;
+  background: var(--navy);
   position: relative; overflow: hidden;
-}
-.eq-hero::before {
-  content: '';
-  position: absolute; inset: 0;
-  background: radial-gradient(ellipse at 70% 50%, rgba(184,147,100,.12) 0%, transparent 65%);
 }
 .eq-hero-inner {
   max-width: var(--max-w); margin: 0 auto; padding: 0 var(--px);
@@ -28,16 +24,16 @@
   display: grid; grid-template-columns: 1fr 420px; gap: 72px; align-items: center;
 }
 .eq-hero-eyebrow {
-  font-size: .72rem; font-weight: 700; letter-spacing: .2em;
+  font-size: .72rem; font-weight: 700; letter-spacing: .09em;
   color: var(--gold-l); text-transform: uppercase; margin-bottom: 18px;
 }
 .eq-hero-title {
   font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 900; color: #fff;
+  font-weight: 650; color: #fff;
   line-height: 1.2; letter-spacing: -.04em;
   margin-bottom: 22px; word-break: keep-all;
 }
-.eq-hero-title em { font-style: normal; color: var(--gold-l); }
+.eq-hero-title em { font-style: normal; color: #eee5d8; }
 .eq-hero-desc {
   font-size: 1.05rem; color: rgba(255,255,255,.72);
   line-height: 1.9; word-break: keep-all; margin-bottom: 36px;
@@ -49,7 +45,7 @@
 }
 .ev-stat { display: flex; align-items: center; gap: 20px; }
 .ev-stat-num {
-  font-size: 2.2rem; font-weight: 900; color: var(--gold-l);
+  font-size: 2.2rem; font-weight: 700; color: var(--gold-l);
   letter-spacing: -.05em; line-height: 1; flex-shrink: 0; min-width: 80px;
 }
 .ev-stat-text { font-size: .9rem; color: rgba(255,255,255,.65); line-height: 1.55; word-break: keep-all; }
@@ -75,7 +71,7 @@
 .badge {
   padding: 6px 16px;
   background: rgba(184,147,100,.15); border: 1px solid rgba(184,147,100,.3);
-  border-radius: 30px; font-size: .78rem; font-weight: 700;
+  border-radius: var(--r); font-size: .78rem; font-weight: 700;
   color: var(--gold-l); letter-spacing: .05em;
 }
 
@@ -85,19 +81,19 @@
 }
 .why-card {
   background: #fff; border-radius: var(--rl); padding: 36px 30px;
-  box-shadow: var(--sh-s);
+
   border-bottom: 3px solid transparent;
   transition: border-color .25s, box-shadow .25s, transform .25s;
   text-align: center;
 }
-.why-card:hover { border-bottom-color: var(--gold); box-shadow: var(--sh-m); transform: translateY(-4px); }
+.why-card:hover { border-bottom-color: var(--gold); }
 .why-icon {
   width: 64px; height: 64px; border-radius: 50%;
   background: var(--g50); margin: 0 auto 20px;
   display: flex; align-items: center; justify-content: center;
 }
 .why-icon svg { width: 30px; height: 30px; stroke: var(--navy); fill: none; stroke-width: 1.7; }
-.why-title { font-size: 1.08rem; font-weight: 800; color: var(--navy); margin-bottom: 10px; word-break: keep-all; }
+.why-title { font-size: 1.08rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; word-break: keep-all; }
 .why-desc { font-size: .9rem; color: var(--sub); line-height: 1.8; word-break: keep-all; }
 
 /* ── Use Cases (Accordion-style cards) ── */
@@ -108,7 +104,7 @@
   border: 1px solid var(--bdr); border-radius: var(--rl); overflow: hidden;
   transition: box-shadow .25s;
 }
-.usecase-card:hover { box-shadow: var(--sh-m); }
+
 .usecase-head {
   padding: 24px 28px;
   background: var(--navy); display: flex; align-items: center; gap: 16px;
@@ -117,7 +113,7 @@
   width: 36px; height: 36px; border-radius: 50%;
   background: var(--gold); color: #fff;
   display: flex; align-items: center; justify-content: center;
-  font-size: .78rem; font-weight: 800; flex-shrink: 0;
+  font-size: .78rem; font-weight: 700; flex-shrink: 0;
 }
 .usecase-cat {
   font-size: .7rem; font-weight: 700; letter-spacing: .12em;
@@ -136,7 +132,7 @@
 /* ── Trial vs No-Trial ── */
 .diff-grid {
   display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
-  border-radius: var(--rl); overflow: hidden; box-shadow: var(--sh-s);
+  border-radius: var(--rl); overflow: hidden;
 }
 .diff-col { padding: 40px 36px; }
 .diff-col.bad { background: #f8f9fb; }
@@ -173,7 +169,7 @@
   width: 44px; height: 44px; border-radius: 50%;
   background: var(--navy); color: var(--gold-l);
   display: flex; align-items: center; justify-content: center;
-  font-size: .8rem; font-weight: 800; flex-shrink: 0; z-index: 1;
+  font-size: .8rem; font-weight: 700; flex-shrink: 0; z-index: 1;
 }
 .process-body { padding: 6px 0 48px 28px; }
 .process-tag { font-size: .7rem; font-weight: 700; color: var(--gold); letter-spacing: .1em; margin-bottom: 6px; }
@@ -224,7 +220,7 @@
 <div id="ticker-slot"></div>
 
 <!-- ── Breadcrumb ── -->
-<nav class="breadcrumb" style="margin-top:var(--nav-h);">
+<nav class="breadcrumb">
   <div class="breadcrumb-inner">
     <a href="index.html">Home</a>
     <span class="breadcrumb-sep">›</span>
@@ -242,7 +238,7 @@
       <h1 class="eq-hero-title">근난시 통합<br><em>트라이얼 렌즈 시스템</em></h1>
       <p class="eq-hero-desc">
         처방 전, 실제 렌즈를 착용해 보는 것이 최선의 부적응 예방입니다.<br>
-        조성인 안경은 근시·난시·누진가입도를 통합한 트라이얼 렌즈로<br>
+        조성인안경원은 근시·난시·누진가입도를 통합한 트라이얼 렌즈로<br>
         제작 전에 착용감·시야·어지러움 여부를 확인합니다.
       </p>
       <div class="badge-row">
@@ -515,7 +511,7 @@
   </div>
 </section>
 
-<script src="js/components.js"></script>
-<script src="js/common.js"></script>
+<script src="js/components.js?v=20261125"></script>
+<script src="js/common.js?v=20261125"></script>
 </body>
 </html>

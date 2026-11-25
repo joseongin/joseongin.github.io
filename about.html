@@ -6,10 +6,11 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
 <meta http-equiv="Pragma" content="no-cache"/>
 <meta http-equiv="Expires" content="0"/>
-<title>안경사 소개 — 조성인 안경</title>
+<title>안경사 소개 — 조성인안경원</title>
+<meta property="og:site_name" content="조성인안경원"/>
 <meta name="description" content="20년 임상 경력, 보건대학교 특강 교수, 옵토메트리스트 3기, 피팅 마스터 수료. 안경사 조성인을 소개합니다."/>
 <link rel="icon" href="favicon.ico"/>
-<link rel="stylesheet" href="css/common.css?v=20260724b"/>
+<link rel="stylesheet" href="css/common.css?v=20261125"/>
 <style>
 
 /* ══════════════════════════════════════
@@ -28,14 +29,6 @@
   position: relative;
   overflow: hidden;
   padding: 0;
-}
-/* 배경 텍스처 */
-.about-hero::before {
-  content: '';
-  position: absolute; inset: 0;
-  background:
-    radial-gradient(ellipse 70% 60% at 70% 40%, rgba(184,147,100,.04) 0%, transparent 65%);
-  pointer-events: none;
 }
 .about-hero-inner {
   max-width: var(--max-w);
@@ -59,34 +52,11 @@
   position: relative;
   margin-top: 64px; /* nav 아래 여백 */
 }
-/* 골드 장식 라인 */
-.about-hero-photo-frame::before {
-  content: '';
-  position: absolute;
-  top: -20px; left: -20px;
-  right: 40px; bottom: 40px;
-  border: 1px solid rgba(184,147,100,.25);
-  border-radius: calc(var(--rl) + 2px);
-  pointer-events: none;
-  z-index: 0;
-}
-.about-hero-photo-frame::after {
-  content: '';
-  position: absolute;
-  bottom: -6px; right: -6px;
-  width: 120px; height: 120px;
-  background: linear-gradient(135deg, var(--gold) 0%, rgba(184,147,100,0) 60%);
-  opacity: .18;
-  border-radius: 0 0 var(--rl) 0;
-  pointer-events: none;
-}
 .about-hero-img {
   position: relative; z-index: 1;
   border-radius: var(--rl);
   overflow: hidden;
-  box-shadow:
-    0 24px 64px rgba(11,31,58,.18),
-    0 0 0 1px rgba(184,147,100,.22);
+
 }
 .about-hero-img img {
   width: 100%;
@@ -94,7 +64,6 @@
   object-fit: cover;
   object-position: center top;
   display: block;
-  filter: brightness(1.02) contrast(1.03);
 }
 /* 이미지 하단 골드 배지 오버레이 */
 .about-hero-img-badge {
@@ -108,13 +77,13 @@
   text-align: center; flex: 1;
 }
 .ahib-num {
-  font-size: 1.6rem; font-weight: 800;
+  font-size: 1.6rem; font-weight: 700;
   color: var(--gold-l); line-height: 1;
   letter-spacing: -.03em;
 }
 .ahib-lbl {
   font-size: .6rem; font-weight: 700;
-  color: rgba(255,255,255,.45);
+  color: rgba(255,255,255,.76);
   letter-spacing: .1em; text-transform: uppercase;
   margin-top: 4px; display: block;
 }
@@ -131,7 +100,7 @@
 }
 .about-hero-tag {
   display: inline-flex; align-items: center; gap: 10px;
-  font-size: .7rem; font-weight: 700; letter-spacing: .22em;
+  font-size: .7rem; font-weight: 700; letter-spacing: .09em;
   color: var(--gold); text-transform: uppercase;
   margin-bottom: 24px;
 }
@@ -142,13 +111,13 @@
 }
 .about-hero-name {
   font-size: clamp(2.4rem, 3.6vw, 3.8rem);
-  font-weight: 800; color: var(--navy);
+  font-weight: 700; color: var(--navy);
   letter-spacing: -.032em; line-height: 1.1;
   margin-bottom: 8px;
 }
 .about-hero-name-en {
   font-size: .88rem; font-weight: 700;
-  color: rgba(11,31,58,.38); letter-spacing: .12em;
+  color: var(--sub); letter-spacing: .12em;
   text-transform: uppercase; margin-bottom: 28px;
   display: block;
 }
@@ -221,16 +190,8 @@
   transition: background .3s, transform .3s;
   position: relative;
 }
-.cred-card::before {
-  content: '';
-  position: absolute; top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--gold), var(--gold-l));
-  transform: scaleX(0); transform-origin: left;
-  transition: transform .4s var(--ease-out-expo);
-}
 .cred-card:hover::before { transform: scaleX(1); }
-.cred-card:hover { background: var(--off); transform: translateY(-3px); }
+.cred-card:hover { background: var(--off); }
 .cred-card-num {
   font-size: .62rem; font-weight: 700; color: var(--gold);
   letter-spacing: .16em; margin-bottom: 16px; display: block;
@@ -240,7 +201,7 @@
   line-height: 1;
 }
 .cred-card h3 {
-  font-size: .97rem; font-weight: 800; color: var(--navy);
+  font-size: .97rem; font-weight: 700; color: var(--navy);
   line-height: 1.45; margin-bottom: 10px; word-break: keep-all;
 }
 .cred-card p {
@@ -269,7 +230,7 @@
   transition: transform 1.2s var(--ease-in-out-quart);
   filter: brightness(.9) contrast(1.05);
 }
-.lecture-feature-visual:hover img { transform: scale(1.04); }
+
 .lecture-feature-ov {
   position: absolute; inset: 0;
   background: linear-gradient(
@@ -287,8 +248,6 @@
 .lecture-feature-tag {
   position: absolute; bottom: 28px; left: 28px;
   background: rgba(6,16,32,.82);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(184,147,100,.3);
   border-radius: 3px;
   padding: 10px 18px;
@@ -304,7 +263,7 @@
   border-radius: 3px;
   padding: 8px 16px;
   color: var(--navy);
-  font-size: .72rem; font-weight: 800; letter-spacing: .08em;
+  font-size: .72rem; font-weight: 700; letter-spacing: .08em;
   z-index: 2;
 }
 
@@ -342,11 +301,11 @@
   border: 1px solid rgba(184,147,100,.3);
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
-  font-size: .65rem; font-weight: 800;
+  font-size: .65rem; font-weight: 700;
   color: var(--gold-l);
 }
 .lpt h4 {
-  font-size: .87rem; font-weight: 800; color: #fff;
+  font-size: .87rem; font-weight: 700; color: #fff;
   margin-bottom: 4px; line-height: 1.4; word-break: keep-all;
 }
 .lpt p {
@@ -374,9 +333,7 @@
   position: relative;
   border-radius: var(--rl);
   overflow: hidden;
-  box-shadow:
-    0 24px 64px rgba(11,31,58,.18),
-    0 0 0 1px rgba(184,147,100,.2);
+
 }
 .cert-frame img {
   width: 100%;
@@ -385,7 +342,7 @@
   filter: brightness(1.04) contrast(1.06) saturate(1.04);
   transition: transform .8s var(--ease-in-out-quart);
 }
-.cert-frame:hover img { transform: scale(1.03); }
+
 /* 수료증 위 골드 장식 */
 .cert-frame::before {
   content: '';
@@ -405,7 +362,7 @@
   border: 1px solid rgba(184,147,100,.35);
   border-radius: var(--r);
   padding: 14px 22px;
-  box-shadow: 0 8px 28px rgba(0,0,0,.18);
+
   display: flex; align-items: center; gap: 12px;
 }
 .cert-issuer-icon {
@@ -413,14 +370,14 @@
   background: linear-gradient(135deg, var(--gold), var(--gold-l));
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-size: .9rem; font-weight: 800; color: var(--navy);
+  font-size: .9rem; font-weight: 700; color: var(--navy);
   flex-shrink: 0;
 }
 .cert-issuer-text {
   display: flex; flex-direction: column;
 }
 .cert-issuer-name {
-  font-size: .78rem; font-weight: 800; color: #fff;
+  font-size: .78rem; font-weight: 700; color: #fff;
   letter-spacing: -.01em; line-height: 1.3;
 }
 .cert-issuer-sub {
@@ -448,8 +405,7 @@
 }
 .cert-item:hover {
   border-color: var(--gold);
-  box-shadow: 0 4px 20px rgba(184,147,100,.12);
-  transform: translateX(4px);
+
 }
 .cert-item-mark {
   width: 36px; height: 36px;
@@ -461,7 +417,7 @@
   font-size: .8rem; color: var(--gold-d);
 }
 .cert-item h4 {
-  font-size: .88rem; font-weight: 800; color: var(--navy);
+  font-size: .88rem; font-weight: 700; color: var(--navy);
   margin-bottom: 3px; line-height: 1.4; word-break: keep-all;
 }
 .cert-item p {
@@ -496,19 +452,11 @@
   transition: background .3s, transform .3s;
   position: relative;
 }
-.phil-card:hover { background: var(--off); transform: translateY(-3px); }
-.phil-card::after {
-  content: '';
-  position: absolute; bottom: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--gold), var(--gold-l));
-  transform: scaleX(0); transform-origin: left;
-  transition: transform .4s var(--ease-out-expo);
-}
+.phil-card:hover { background: var(--off); }
 .phil-card:hover::after { transform: scaleX(1); }
 .phil-num { font-size: .62rem; font-weight: 700; color: var(--gold); letter-spacing: .14em; margin-bottom: 14px; display: block; }
 .phil-mark { font-size: 1.7rem; color: var(--navy); display: block; margin-bottom: 16px; line-height: 1; }
-.phil-card h3 { font-size: .97rem; font-weight: 800; color: var(--navy); margin-bottom: 10px; line-height: 1.42; word-break: keep-all; }
+.phil-card h3 { font-size: .97rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; line-height: 1.42; word-break: keep-all; }
 .phil-card p { font-size: .82rem; color: var(--sub); line-height: 1.85; word-break: keep-all; }
 
 /* ══════════════════════════════════════
@@ -528,14 +476,14 @@
   width: 12px; height: 12px; border-radius: 50%;
   background: var(--gold);
   border: 2px solid #fff;
-  box-shadow: 0 0 0 2px var(--gold);
+
 }
 .tl-year {
   font-size: .7rem; font-weight: 700; color: var(--gold);
   letter-spacing: .1em; margin-bottom: 6px; display: block;
 }
 .tl-title {
-  font-size: .97rem; font-weight: 800; color: var(--navy);
+  font-size: .97rem; font-weight: 700; color: var(--navy);
   margin-bottom: 5px; word-break: keep-all; line-height: 1.45;
 }
 .tl-desc {
@@ -832,7 +780,7 @@
   <div class="wrap">
     <div class="s-head s-head--c rv">
       <div class="s-label s-label--c">Clinical Philosophy</div>
-      <h2 class="s-title">조성인 안경의 검안 철학</h2>
+      <h2 class="s-title">조성인안경원의 검안 철학</h2>
       <p class="s-sub">20년의 임상 경험에서 얻은 세 가지 핵심 원칙</p>
     </div>
     <div class="phil-grid">
@@ -873,7 +821,7 @@
         <div class="tl-item rv">
           <div class="tl-dot"></div>
           <span class="tl-year">2005 — 현재</span>
-          <div class="tl-title">조성인 안경 운영 (대전 서구 둔산동)</div>
+          <div class="tl-title">조성인안경원 운영 (대전 서구 둔산동)</div>
           <div class="tl-desc">20년간 대전 서구 지역에서 임상 안경원을 운영하며 고도수·누진다초점·안질환 케어 안경 제작 전문 역량을 지속적으로 축적.</div>
         </div>
 
@@ -926,7 +874,7 @@
   </div>
 </div>
 
-<script src="js/components.js"></script>
-<script src="js/common.js"></script>
+<script src="js/components.js?v=20261125"></script>
+<script src="js/common.js?v=20261125"></script>
 </body>
 </html>
