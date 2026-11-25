@@ -1,6 +1,37 @@
 /* 조성인안경원 — 공통 인터랙션 */
+function initSectionMotion() {
+  if (!('IntersectionObserver' in window) || !window.matchMedia('(prefers-reduced-motion: no-preference)').matches) return;
+
+  const markers = '.rv, .sr';
+  const pending = [...document.querySelectorAll(markers)].filter(section => (
+    section.getBoundingClientRect().top >= window.innerHeight && !section.parentElement.closest(markers)
+  ));
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(({ isIntersecting, target }) => {
+      if (!isIntersecting) return;
+      observer.unobserve(target);
+      target.classList.replace('reveal-pending', 'reveal-in');
+      target.addEventListener('animationend', () => target.classList.remove('reveal-in'), { once: true });
+    });
+  }, { rootMargin: '0px 0px -18px' });
+
+  pending.forEach(section => {
+    section.classList.add('reveal-pending');
+    observer.observe(section);
+  });
+
+  document.addEventListener('focusin', event => {
+    const section = event.target.closest('.reveal-pending, .reveal-in');
+    if (!section) return;
+    observer.unobserve(section);
+    section.classList.remove('reveal-pending', 'reveal-in');
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
+
+  initSectionMotion();
 
   const path = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-link, .nav-dropdown a, .drawer-link, .drawer-sub-link').forEach(link => {
