@@ -10,7 +10,7 @@
 <meta property="og:site_name" content="조성인안경원"/>
 <meta name="description" content="20년 임상 경력의 안경사 조성인이 직접 문진부터 피팅까지 책임지는 대전 프리미엄 임상 안경원. ZEISS 정밀 장비, 누진다초점 전문."/>
 <link rel="icon" href="favicon.ico"/>
-<link rel="preload" as="image" href="img/hero-eyewear-poster.webp"/>
+<link rel="preload" as="image" href="img/hero-eyewear-loop-poster.webp"/>
 <link rel="stylesheet" href="css/common.css?v=20261126-video"/>
 <style>
 
@@ -537,7 +537,7 @@
 ══════════════════════════════════════ -->
 <section class="hero" id="hero">
   <div class="hero-bg">
-    <video id="hero-video" class="hero-video" data-src="img/hero-eyewear.mp4" poster="img/hero-eyewear-poster.webp" preload="none" muted playsinline aria-hidden="true"></video>
+    <video id="hero-video" class="hero-video" data-src="img/hero-eyewear-loop.mp4" poster="img/hero-eyewear-loop-poster.webp" preload="none" loop muted playsinline aria-hidden="true"></video>
   </div>
   <div class="hero-ov"></div>
 
@@ -940,22 +940,21 @@
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   function updateButton() {
-    const playing = !video.paused && !video.ended;
+    const playing = !video.paused;
     toggle.classList.toggle('is-playing', playing);
-    toggle.textContent = playing ? '영상 일시정지' : video.ended ? '영상 다시 재생' : '영상 재생';
+    toggle.textContent = playing ? '영상 일시정지' : '영상 재생';
   }
 
   function playVideo() {
     if (!video.hasAttribute('src')) video.src = video.dataset.src;
-    if (video.ended) video.currentTime = 0;
     video.play().catch(updateButton);
   }
 
   video.muted = true;
-  ['play', 'pause', 'ended'].forEach(event => video.addEventListener(event, updateButton));
+  ['play', 'pause'].forEach(event => video.addEventListener(event, updateButton));
   video.addEventListener('error', () => { toggle.hidden = true; });
   toggle.addEventListener('click', () => {
-    if (video.paused || video.ended) playVideo();
+    if (video.paused) playVideo();
     else video.pause();
   });
   reducedMotion.addEventListener('change', event => { if (event.matches) video.pause(); });
