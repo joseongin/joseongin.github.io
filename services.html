@@ -10,7 +10,7 @@
 <meta property="og:site_name" content="조성인안경원"/>
 <meta name="description" content="정밀검안, 누진다초점, 고도수 안경, 성장기 근시 관리, 안질환 보조, 정밀 피팅. 대전 조성인안경원의 6가지 전문 분야를 소개합니다."/>
 <link rel="icon" href="favicon.ico"/>
-<link rel="stylesheet" href="css/common.css?v=20261125-motion"/>
+<link rel="stylesheet" href="css/common.css?v=20261126-video"/>
 <style>
 /* ── 분야 탭 네비게이션 ── */
 .svc-nav {
@@ -64,7 +64,7 @@
 .svc-img-wrap img {
   width: 100%; aspect-ratio: 4/3;
   object-fit: cover; display: block;
-  background: #d8e4f0;
+  background: var(--bdr);
   transition: transform 1s cubic-bezier(0.76,0,0.24,1);
 }
 /* 흰 배경 제품 사진 — contain 모드 */
@@ -76,7 +76,7 @@
 /* 수료증 사진 — 살짝 여백 주고 contain */
 .svc-img-wrap--cert img {
   object-fit: contain;
-  background: #f5f0e8;
+  background: var(--off);
   padding: 20px;
 }
 
@@ -84,7 +84,7 @@
 .svc-img-wrap::before {
   content: '';
   position: absolute; top: -16px; left: -16px; right: 32px; bottom: 32px;
-  border: 1px solid rgba(184,147,100,.2);
+  border: 1px solid rgb(var(--accent-rgb) / .2);
   border-radius: calc(var(--rl) + 2px);
   pointer-events: none; z-index: 0;
 }
@@ -94,7 +94,7 @@
   position: absolute; inset: 0; z-index: 1;
   background: linear-gradient(
     to top,
-    rgba(11,31,58,.28) 0%,
+    rgb(var(--ink-rgb) / .28) 0%,
     transparent 45%
   );
   pointer-events: none;
@@ -102,8 +102,8 @@
 .svc-img-badge {
   position: absolute; z-index: 2;
   bottom: 20px; left: 20px;
-  background: rgba(11,31,58,.82);
-  border: 1px solid rgba(184,147,100,.32);
+  background: rgb(var(--ink-rgb) / .82);
+  border: 1px solid rgb(var(--accent-rgb) / .32);
   border-radius: 3px;
   padding: 8px 16px;
   color: var(--gold-l);
@@ -120,7 +120,7 @@
   line-height: 1.3; word-break: keep-all; margin-bottom: 18px;
 }
 .svc-lead {
-  font-size: 1rem; color: #2d3748; line-height: 1.9;
+  font-size: 1rem; color: var(--g800); line-height: 1.9;
   word-break: keep-all; margin-bottom: 28px;
   border-left: 3px solid var(--gold);
   padding-left: 18px;
@@ -129,7 +129,7 @@
 .svc-point {
   display: flex; gap: 14px;
   padding: 14px 0;
-  border-bottom: 1px solid #edf0f5;
+  border-bottom: 1px solid var(--g50);
   align-items: flex-start;
 }
 .svc-point:last-child { border-bottom: none; }
@@ -145,12 +145,12 @@
   margin-bottom: 5px; word-break: keep-all;
 }
 .svc-point-desc {
-  font-size: .88rem; color: #4a5568; line-height: 1.75; word-break: keep-all;
+  font-size: .88rem; color: var(--sub); line-height: 1.75; word-break: keep-all;
 }
 
 /* 대상자 태그 */
 .svc-who {
-  background: #f0f4f8;
+  background: var(--off);
   border-radius: 10px;
   padding: 20px 24px;
   margin-top: 4px;
@@ -161,9 +161,9 @@
 }
 .svc-who-tags { display: flex; flex-wrap: wrap; gap: 8px; }
 .svc-who-tag {
-  background: #fff; border: 1.5px solid #cbd5e0;
+  background: #fff; border: 1.5px solid var(--g200);
   border-radius: 20px; padding: 5px 14px;
-  font-size: .8rem; color: #2d3748; font-weight: 500; word-break: keep-all;
+  font-size: .8rem; color: var(--g800); font-weight: 500; word-break: keep-all;
 }
 
 /* ── 전체 전문분야 카드 그리드 (상단 요약) ── */
@@ -187,7 +187,7 @@
   font-size: 1.05rem; font-weight: 700; color: var(--navy);
   margin-bottom: 8px; word-break: keep-all;
 }
-.svc-ov-desc { font-size: .85rem; color: #718096; line-height: 1.7; word-break: keep-all; }
+.svc-ov-desc { font-size: .85rem; color: var(--sub); line-height: 1.7; word-break: keep-all; }
 
 /* ── Responsive ── */
 @media(max-width:1024px) {
@@ -283,7 +283,7 @@
       </div>
       <div>
         <p class="svc-eyebrow">&#9670; SPECIALTY 01</p>
-        <h2 class="svc-title">정밀 검안<br><span style="font-size:1.1rem; font-weight:600; color:#4a5568;">단순 도수 측정이 아닌 시기능 종합 평가</span></h2>
+        <h2 class="svc-title">정밀 검안<br><span style="font-size:1.1rem; font-weight:600; color:var(--sub);">단순 도수 측정이 아닌 시기능 종합 평가</span></h2>
         <p class="svc-lead">
           일반적인 자동굴절검사기 측정값은 출발점일 뿐입니다.
           조성인안경원의 정밀 검안은 ZEISS 웨이브프론트 분석,
@@ -340,7 +340,7 @@
     <div class="svc-grid reverse rv">
       <div>
         <p class="svc-eyebrow">&#9670; SPECIALTY 02</p>
-        <h2 class="svc-title">누진다초점 안경<br><span style="font-size:1.1rem; font-weight:600; color:#4a5568;">부적응 없는 누진 처방, 데이터로 증명</span></h2>
+        <h2 class="svc-title">누진다초점 안경<br><span style="font-size:1.1rem; font-weight:600; color:var(--sub);">부적응 없는 누진 처방, 데이터로 증명</span></h2>
         <p class="svc-lead">
           누진다초점 안경 부적응률은 평균 15~20%에 달한다고 알려져 있습니다.
           조성인안경원은 트라이얼 체험, 3D 피팅 측정, 개인 맞춤 설계를 통해
@@ -404,7 +404,7 @@
       </div>
       <div>
         <p class="svc-eyebrow">&#9670; SPECIALTY 03</p>
-        <h2 class="svc-title">고도수 안경<br><span style="font-size:1.1rem; font-weight:600; color:#4a5568;">&#177;6D 이상 고도수 맞춤 정밀 제작</span></h2>
+        <h2 class="svc-title">고도수 안경<br><span style="font-size:1.1rem; font-weight:600; color:var(--sub);">&#177;6D 이상 고도수 맞춤 정밀 제작</span></h2>
         <p class="svc-lead">
           고도수 안경은 렌즈 두께·무게·왜곡·광학중심 오차에 민감합니다.
           미세한 처방 오차도 착용 불편으로 이어지기 때문에
@@ -460,7 +460,7 @@
     <div class="svc-grid reverse rv">
       <div>
         <p class="svc-eyebrow">&#9670; SPECIALTY 04</p>
-        <h2 class="svc-title">성장기 근시 관리<br><span style="font-size:1.1rem; font-weight:600; color:#4a5568;">진행을 억제하는 과학적 접근</span></h2>
+        <h2 class="svc-title">성장기 근시 관리<br><span style="font-size:1.1rem; font-weight:600; color:var(--sub);">진행을 억제하는 과학적 접근</span></h2>
         <p class="svc-lead">
           어린이·청소년 근시는 방치하면 고도근시로 진행해
           망막박리 등 심각한 합병증 위험이 높아집니다.
@@ -524,7 +524,7 @@
       </div>
       <div>
         <p class="svc-eyebrow">&#9670; SPECIALTY 05</p>
-        <h2 class="svc-title">안질환 보조 교정<br><span style="font-size:1.1rem; font-weight:600; color:#4a5568;">복잡한 처방도 포기하지 않습니다</span></h2>
+        <h2 class="svc-title">안질환 보조 교정<br><span style="font-size:1.1rem; font-weight:600; color:var(--sub);">복잡한 처방도 포기하지 않습니다</span></h2>
         <p class="svc-lead">
           안과 치료를 받는 중이거나, 일반 안경원에서 "처방이 어렵다"는 말을 들으셨다면
           조성인안경원과 상담해 보세요.
@@ -580,7 +580,7 @@
     <div class="svc-grid reverse rv">
       <div>
         <p class="svc-eyebrow">&#9670; SPECIALTY 06</p>
-        <h2 class="svc-title">정밀 피팅<br><span style="font-size:1.1rem; font-weight:600; color:#4a5568;">완성 안경이 얼굴에 맞는 그날까지</span></h2>
+        <h2 class="svc-title">정밀 피팅<br><span style="font-size:1.1rem; font-weight:600; color:var(--sub);">완성 안경이 얼굴에 맞는 그날까지</span></h2>
         <p class="svc-lead">
           아무리 좋은 처방도 피팅이 틀어지면 시력이 떨어지고 두통이 생깁니다.
           안경테·렌즈·얼굴이 정확히 정렬되도록

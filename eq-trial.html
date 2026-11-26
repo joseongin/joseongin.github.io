@@ -10,7 +10,7 @@
 <meta property="og:site_name" content="조성인안경원"/>
 <meta name="description" content="근거리·난시·누진 처방을 제작 전에 실제로 체험합니다. 조성인안경원의 통합 트라이얼 렌즈 시스템으로 부적응 위험을 선제적으로 차단합니다."/>
 <link rel="icon" href="favicon.ico"/>
-<link rel="stylesheet" href="css/common.css?v=20261125-motion"/>
+<link rel="stylesheet" href="css/common.css?v=20261126-video"/>
 <style>
 /* ── Hero ── */
 .eq-hero {
@@ -33,7 +33,7 @@
   line-height: 1.2; letter-spacing: -.04em;
   margin-bottom: 22px; word-break: keep-all;
 }
-.eq-hero-title em { font-style: normal; color: #eee5d8; }
+.eq-hero-title em { font-style: normal; color: #eae6e5; }
 .eq-hero-desc {
   font-size: 1.05rem; color: rgba(255,255,255,.72);
   line-height: 1.9; word-break: keep-all; margin-bottom: 36px;
@@ -70,7 +70,7 @@
 .badge-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 36px; }
 .badge {
   padding: 6px 16px;
-  background: rgba(184,147,100,.15); border: 1px solid rgba(184,147,100,.3);
+  background: rgb(var(--accent-rgb) / .15); border: 1px solid rgb(var(--accent-rgb) / .3);
   border-radius: var(--r); font-size: .78rem; font-weight: 700;
   color: var(--gold-l); letter-spacing: .05em;
 }
@@ -135,21 +135,21 @@
   border-radius: var(--rl); overflow: hidden;
 }
 .diff-col { padding: 40px 36px; }
-.diff-col.bad { background: #f8f9fb; }
+.diff-col.bad { background: var(--off); }
 .diff-col.good { background: var(--navy); }
 .diff-head {
   font-size: .75rem; font-weight: 700; letter-spacing: .12em;
   text-transform: uppercase; margin-bottom: 20px;
   padding-bottom: 16px; border-bottom: 2px solid;
 }
-.diff-col.bad .diff-head { color: #94a3b8; border-color: var(--bdr); }
-.diff-col.good .diff-head { color: var(--gold); border-color: rgba(184,147,100,.3); }
+.diff-col.bad .diff-head { color: var(--g400); border-color: var(--bdr); }
+.diff-col.good .diff-head { color: var(--gold); border-color: rgb(var(--accent-rgb) / .3); }
 .diff-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px; }
 .diff-list li {
   display: flex; align-items: flex-start; gap: 12px;
   font-size: .9rem; line-height: 1.7; word-break: keep-all;
 }
-.diff-col.bad .diff-list li { color: #64748b; }
+.diff-col.bad .diff-list li { color: var(--g600); }
 .diff-col.good .diff-list li { color: rgba(255,255,255,.78); }
 .diff-icon { flex-shrink: 0; margin-top: 3px; font-size: 1rem; }
 

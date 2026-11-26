@@ -10,7 +10,7 @@
 <meta property="og:site_name" content="조성인안경원"/>
 <meta name="description" content="ZEISS i.Profiler, 사르망 트라이얼 렌즈, 정밀 피팅 시스템. 대전 조성인안경원이 보유한 전문 장비를 소개합니다."/>
 <link rel="icon" href="favicon.ico"/>
-<link rel="stylesheet" href="css/common.css?v=20261125-motion"/>
+<link rel="stylesheet" href="css/common.css?v=20261126-video"/>
 <style>
 
 /* ══════════════════════════════════════
@@ -34,29 +34,29 @@
 .deep-img-wrap img {
   width: 100%; aspect-ratio: 4/3;
   object-fit: cover; display: block;
-  background: #d8e4f0;
+  background: var(--bdr);
   transition: transform 1s cubic-bezier(0.76,0,0.24,1);
 }
 
 .deep-img-wrap::before {
   content: '';
   position: absolute; top: -16px; left: -16px; right: 32px; bottom: 32px;
-  border: 1px solid rgba(184,147,100,.2);
+  border: 1px solid rgb(var(--accent-rgb) / .2);
   border-radius: calc(var(--rl) + 2px);
   pointer-events: none; z-index: 0;
 }
 .deep-img-wrap::after {
   content: '';
   position: absolute; inset: 0; z-index: 1;
-  background: linear-gradient(to top, rgba(11,31,58,.22) 0%, transparent 40%);
+  background: linear-gradient(to top, rgb(var(--ink-rgb) / .22) 0%, transparent 40%);
   pointer-events: none;
 }
 .deep-img-badge {
   position: absolute; z-index: 2;
   bottom: 20px; left: 20px;
-  background: rgba(11,31,58,.82);
+  background: rgb(var(--ink-rgb) / .82);
 
-  border: 1px solid rgba(184,147,100,.32);
+  border: 1px solid rgb(var(--accent-rgb) / .32);
   border-radius: 3px; padding: 8px 16px;
   color: var(--gold-l);
   font-size: .68rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
@@ -161,7 +161,7 @@
 .flow-step:nth-child(odd) {
   background: var(--navy);
 }
-.flow-step:nth-child(odd) .flow-step-num { color: rgba(184,147,100,.35); }
+.flow-step:nth-child(odd) .flow-step-num { color: rgb(var(--accent-rgb) / .35); }
 .flow-step:nth-child(odd) .flow-step-badge { color: var(--gold-l); }
 .flow-step:nth-child(odd) .flow-step-title { color: #fff; }
 .flow-step:nth-child(odd) .flow-step-desc { color: rgba(255,255,255,.55); }
@@ -169,7 +169,7 @@
 
 .flow-step-num {
   font-size: 3rem; font-weight: 700;
-  color: rgba(10,28,51,.08); line-height: 1;
+  color: rgb(var(--ink-rgb) / .08); line-height: 1;
   margin-bottom: 12px; letter-spacing: -.06em;
 }
 .flow-step-badge {
@@ -205,7 +205,7 @@
   transition: border-color .3s, box-shadow .3s, transform .35s;
   background: #fff;
 }
-.diff-card:hover { border-color: rgba(184,146,74,.4); }
+.diff-card:hover { border-color: rgb(var(--accent-rgb) / .4); }
 .diff-icon {
   width: 56px; height: 56px; margin: 0 auto 20px;
   background: var(--g50); border: 1px solid var(--bdr);
@@ -537,7 +537,7 @@
 
       <div class="diff-card">
         <div class="diff-icon">
-          <svg viewBox="0 0 48 48" fill="none" stroke="#0b1f3a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="36" height="36">
+          <svg viewBox="0 0 48 48" fill="none" stroke="var(--navy)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="36" height="36">
             <path d="M12 34 C12 22 18 14 24 14 C30 14 36 22 36 34"/>
             <path d="M18 34 C18 26 20.5 20 24 20 C27.5 20 30 26 30 34"/>
             <line x1="12" y1="34" x2="36" y2="34"/>
@@ -554,10 +554,10 @@
 
       <div class="diff-card">
         <div class="diff-icon">
-          <svg viewBox="0 0 48 48" fill="none" stroke="#0b1f3a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="36" height="36">
+          <svg viewBox="0 0 48 48" fill="none" stroke="var(--navy)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="36" height="36">
             <path d="M8 24 Q14 12 24 12 Q34 12 40 24 Q34 36 24 36 Q14 36 8 24Z"/>
             <circle cx="24" cy="24" r="5"/>
-            <circle cx="24" cy="24" r="2" fill="#0b1f3a" stroke="none"/>
+            <circle cx="24" cy="24" r="2" fill="var(--navy)" stroke="none"/>
           </svg>
         </div>
         <div class="diff-title">야간·고도수 시력 최적화</div>
@@ -570,7 +570,7 @@
 
       <div class="diff-card">
         <div class="diff-icon">
-          <svg viewBox="0 0 48 48" fill="none" stroke="#0b1f3a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="36" height="36">
+          <svg viewBox="0 0 48 48" fill="none" stroke="var(--navy)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="36" height="36">
             <rect x="12" y="16" width="24" height="20" rx="3"/>
             <path d="M18 16 L18 13 Q18 9 24 9 Q30 9 30 13 L30 16"/>
             <path d="M19 27 L22 30 L29 23" stroke-width="1.8"/>
